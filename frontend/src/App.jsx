@@ -1,10 +1,10 @@
+import Loadscreen from "./components/Loadscreen"
+
+
 function App() {
 
-  return <>
-     
-  
-  
-  
+  return <> 
+  <Loadscreen />
   </>
   
 }
