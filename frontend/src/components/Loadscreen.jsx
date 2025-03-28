@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react'
-import styles from "./Loadscreen.module.css"
 
 function Loadscreen() {
 
@@ -40,6 +39,10 @@ function Loadscreen() {
           `polygon(100% 100%, 100% 100%, 100% 50%, 100% 50%)`
         ];
 
+        document.getElementById("centerText").style.opacity = "0";
+        document.getElementById("pathParent").style.backgroundColor = "transparent";
+        document.querySelector("body").style.overflowY = "auto";
+
         finalPaths.forEach((newPath, index) => {
           setTimeout(() => {
             setInitialPath((prevPaths) => {
@@ -57,24 +60,27 @@ function Loadscreen() {
     return () => clearTimeout(timeout1);
   }, []);
 
-  return <> 
-    <section className='w-screen h-screen relative'>
-      <div className='w-[40%] h-[10%] bg-amber-50 absolute right-[50%] bottom-[50%] translate-x-[50%] translate-y-[50%]'></div>
-      <div className="w-full h-full bg-[#101010]" id='pathParent'>
-        
-          <div className={styles.firstPath} style={{clipPath: initialPath[0]}}></div>
-          <div className={styles.firstPath} style={{clipPath: initialPath[1]}}></div>
-          <div className={styles.firstPath} style={{clipPath: initialPath[2]}}></div>
-          <div className={styles.firstPath} style={{clipPath: initialPath[3]}}></div>
-          <div className={styles.firstPath} style={{clipPath: initialPath[4]}}></div>
-          <div className={styles.firstPath} style={{clipPath: initialPath[5]}}></div>
-          <div className={styles.firstPath} style={{clipPath: initialPath[6]}}></div>
-          <div className={styles.firstPath} style={{clipPath: initialPath[7]}}></div>
-
-      </div>  
+  const pathStyles = {
+    width: "100%",
+    height: "100%",
+    position: "absolute",
+    backgroundColor: "rgb(10, 10, 10)",
+    transition: "all ease-in-out 0.4s"
+  };
+  
+  return (
+    <section className='fixed'>
+      <div className='w-[40%] h-[10%] bg-amber-50 absolute right-[50%] bottom-[50%] translate-x-[50%] translate-y-[50%] transition-all ease-in-out duration-1000' id='centerText'>
+        <div className='w-fit absolute right-[50%] bottom-[50%] translate-x-[50%] translate-y-[50%]'>WEB DESIGNER & DEVELOPER</div>
+      </div>
+      <div className="w-screen h-screen" style={{backgroundColor: "white", transition: "all ease-in-out 1s"}} id='pathParent'>
+        {initialPath.map((path, index) => (
+            <div key={index} style={{ ...pathStyles, clipPath: path }} />
+        ))}
+      </div>
     </section>
     
-  </>
+  );
 }
 
 export default Loadscreen
