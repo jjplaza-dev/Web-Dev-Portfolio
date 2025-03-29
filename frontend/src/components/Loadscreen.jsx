@@ -58,7 +58,15 @@ function Loadscreen() {
     }, 1000);
 
     return () => clearTimeout(timeout1);
+
+    
   }, []);
+
+  useEffect(() => {
+    setTimeout(() => {
+      document.getElementById("loadscreen").style.display = "none";
+    }, 3000)
+  })
 
   const pathStyles = {
     width: "100%",
@@ -69,8 +77,8 @@ function Loadscreen() {
   };
   
   return (
-    <section className='fixed'>
-      <div className='w-[40%] h-[10%] bg-amber-50 absolute right-[50%] bottom-[50%] translate-x-[50%] translate-y-[50%] transition-all ease-in-out duration-1000' id='centerText'>
+    <section className='fixed z-2' id='loadscreen'>
+      <div className='w-[40%] h-[10%]  absolute right-[50%] bottom-[50%] translate-x-[50%] translate-y-[50%] transition-all ease-in-out duration-1000' id='centerText'>
         <div className='w-fit absolute right-[50%] bottom-[50%] translate-x-[50%] translate-y-[50%]'>WEB DESIGNER & DEVELOPER</div>
       </div>
       <div className="w-screen h-screen" style={{backgroundColor: "white", transition: "all ease-in-out 1s"}} id='pathParent'>
