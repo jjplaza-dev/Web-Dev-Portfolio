@@ -1,33 +1,54 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 
 function Cursor() {
-  const [position, setPosition] = useState({ x: 0, y: 0 });
-  const [curSize, setCurSize] = useState({ x: 0, y: 0 });
-
-  useEffect(() => {
-    const buttons = document.querySelectorAll('button');
-
-    buttons.forEach(button => {
-        button.addEventListener('mouseenter', (e) => {
-            const rect = e.target.getBoundingClientRect();
-            console.log(rect)
-            setPosition({x: rect.x + 20, y: rect.y + 20})
-            setCurSize({x: rect.width, y: rect.height})
-            document.getElementById("cursorBox").style.opacity = "1";
-        });
-        button.addEventListener('mouseleave', (e) => {
-            document.getElementById("cursorBox").style.opacity = "0";
-        });
+    const [position, setPosition] = useState({ x: 0, y: 0 });
+    const [curSize, setCurSize] = useState({ x: 0, y: 0 });
+    const isHoveringButtonRef = useRef(false);
+  
+    useEffect(() => {
+      const buttons = document.querySelectorAll('button');
+      
+      const handleMouseMove = (e) => {
+        if (!isHoveringButtonRef.current) {
+          setPosition({ x: e.clientX, y: e.clientY });
+          setCurSize({x: 40, y: 40})
+        }
+      };
+  
+      const handleMouseEnter = (e) => {
+        const rect = e.target.getBoundingClientRect();
+        setPosition({ x: rect.x + 20, y: rect.y + 20 });
+        setCurSize({ x: rect.width, y: rect.height });
+        isHoveringButtonRef.current = true;
+        document.getElementById("cursorBox").style.opacity = "1";
+      };
+  
+      const handleMouseLeave = () => {
+        isHoveringButtonRef.current = false;
+      };
+  
+      window.addEventListener('mousemove', handleMouseMove);
+      buttons.forEach(button => {
+        button.addEventListener('mouseenter', handleMouseEnter);
+        button.addEventListener('mouseleave', handleMouseLeave);
       });
-  })
+      
+      return () => {
+        window.removeEventListener('mousemove', handleMouseMove);
+        buttons.forEach(button => {
+          button.removeEventListener('mouseenter', handleMouseEnter);
+          button.removeEventListener('mouseleave', handleMouseLeave);
+        });
+      };
+    }, []);
 
   return (
     <div
-      className='w-10 aspect-square  fixed top-0 left-0 pointer-events-none duration-100 mix-blend-difference'
+      className='w-10 aspect-square  fixed top-0 left-0 pointer-events-none duration-50 mix-blend-difference'
       style={{ transform: `translate(${position.x - 20}px, ${position.y - 20}px)`, width: `${curSize.x}px`, height: `${curSize.y}px` }}
       id='cursorBox'
     >
-        <div className='w-4/12 h-4/12 absolute top-0 border-2 border-b-0 border-r-0'></div>
+        <div className='w-4/12 h-4/12 absolute top-0 border-2 border-b-0 border-r-0'>✘</div>
         <div className='w-4/12 h-4/12 absolute bottom-0 border-2 border-t-0 border-r-0'></div>
         <div className='w-4/12 h-4/12 absolute right-0 border-2 border-b-0 border-l-0'></div>
         <div className='w-4/12 h-4/12 absolute right-0 bottom-0 border-2 border-t-0 border-l-0'></div>

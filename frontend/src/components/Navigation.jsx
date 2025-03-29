@@ -10,7 +10,7 @@ function Navigation() {
           <button className="w-25 sm:w-30 h-9/12 border border-x-black border-y-0 border-solid">Contact</button>
         </nav>
       </div>
-      <div className="w-15 h-screen absolute left-0 top-0 border-r border-black backdrop-blur-md bg-white/30 hidden sm:block">
+      <div className="w-15 h-screen absolute left-0 top-0 border-r border-black backdrop-blur-3xl bg-white/30 hidden sm:block">
         {/* Social Icons or Links can be added here */}
       </div>
     </section>
