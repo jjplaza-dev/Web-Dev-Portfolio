@@ -43,36 +43,35 @@ function FeaturedWorks() {
     })
   })
 
-  const myDivRef = useRef(null);
+  const divRefs = useRef([]);
 
-  const handleScroll = () => {
-    myDivRef.current?.scrollIntoView({ behavior: "smooth" });
+  const handleScroll = (index) => {
+    if (divRefs.current[index]) {
+      divRefs.current[index].scrollIntoView({ behavior: "smooth", block: "start" });
+    }
   };
 
   return <>
     <section className='w-screen h-fit relative' id='featuredWorks'>
       <div className='w-full h-full md:h-full bg-[#101010]'>
-        <display className='w-6/12 h-full hidden md:block bg-amber-100 absolute right-0'>
-          <div className='w-full h-[90vh] bg-amber-700 sticky top-20'>
+        <div className='w-6/12 h-full hidden md:block bg-white absolute right-0'>
+          <div className='w-full h-[10vh] sticky top-[10vh] z-1 text-8xl text-center bottom-0 mix-blend-difference text-white'>FEATURED WORK</div>
+          <div className='w-full h-[80vh] bg-[#101010] sticky top-[20vh]'></div>
+        </div>
 
-          </div>
-        </display>
-
-        <ul ref={myDivRef} className='w-12/12 h-120 md:w-6/12 md:h-[70vh]'>
-          <div onClick={handleScroll} className='w-12/12 h-full sm:h-20 border-2 border-black ease-in-out transition-all duration-500' id='worksBox'></div>
+        {[...Array(5)].map((_, index) => (
+        <ul
+          key={index}
+          ref={(reference) => (divRefs.current[index] = reference)}
+          className="w-12/12 h-120 md:w-6/12 md:h-[70vh]"
+        >
+          <div
+            onClick={() => handleScroll(index)}
+            className="w-12/12 h-full sm:h-20 border-2 border-black ease-in-out transition-all duration-500"
+            id="worksBox"
+          ></div>
         </ul>
-        <ul className='w-12/12 h-120 md:w-6/12 md:h-[70vh]'>
-          <div onClick={handleScroll} className='w-12/12 h-full-120 sm:h-20 border-2 border-black ease-in-out transition-all duration-500' id='worksBox'></div>
-        </ul>
-        <ul className='w-12/12 h-120 md:w-6/12 md:h-[70vh]'>
-          <div onClick={handleScroll} className='w-12/12 h-full-120 sm:h-20 border-2 border-black ease-in-out transition-all duration-500' id='worksBox'></div>
-        </ul>
-        <ul className='w-12/12 h-120 md:w-6/12 md:h-[70vh]'>
-          <div onClick={handleScroll} className='w-12/12 h-full-120 sm:h-20 border-2 border-black ease-in-out transition-all duration-500' id='worksBox'></div>
-        </ul>
-        <ul className='w-12/12 h-120 md:w-6/12 md:h-[70vh]'>
-          <div onClick={handleScroll} className='w-12/12 h-full-120 sm:h-20 border-2 border-black ease-in-out transition-all duration-500' id='worksBox'></div>
-        </ul>
+      ))}
 
         
       </div>
