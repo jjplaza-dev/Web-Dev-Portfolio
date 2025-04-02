@@ -1,18 +1,8 @@
 import React, { useEffect, useRef, useState } from 'react'
 
 function FeaturedWorks() {
-  /* const [position, setPosition] = useState(0)
 
-  useEffect(() => {
-    window.addEventListener("scroll",(e) => {
-      const rect = document.getElementById("featuredWorks").getBoundingClientRect();
-      setPosition(rect.y - rect.height)
-
-    })
-    
-  })
- */
-  useEffect(() => {
+  /* useEffect(() => {
     const worksBox = document.querySelectorAll('#worksBox');
 
     worksBox.forEach((worksBox, index) => {
@@ -32,12 +22,7 @@ function FeaturedWorks() {
           worksBox.style.top = `60px`
           
         }
-        
-       /* if((document.getElementById("featuredWorks").getBoundingClientRect().bottom - window.innerHeight) <= 0){
-        document.getElementById("featuredText").style.position = "absolute";
-       } else {
-        document.getElementById("featuredText").style.position = "fixed";
-       } */
+
       })
       
     })
@@ -52,7 +37,7 @@ function FeaturedWorks() {
   };
 
   return <>
-    <section className='w-screen h-fit relative' id='featuredWorks'>
+    <section className='w-[84vw] md:w-[86vw] h-fit relative mx-auto' id='featuredWorks'>
       <div className='w-full h-full md:h-full bg-[#101010]'>
         <div className='w-6/12 h-full hidden md:block bg-white absolute right-0'>
           <div className='w-full h-[10vh] sticky top-[10vh] z-1 text-8xl text-center bottom-0 mix-blend-difference text-white'>FEATURED WORK</div>
@@ -76,7 +61,32 @@ function FeaturedWorks() {
         
       </div>
     </section>
+  </> */
+
+
+  useEffect (() => {
+     const featuredWorksText =  document.getElementById("featuredWorksText")
+
+     
+
+     window.addEventListener("scroll", () => {
+
+   
+      if((featuredWorksText.getBoundingClientRect().y + featuredWorksText.getBoundingClientRect().height/2) <= window.innerHeight/2){
+        console.log("HERE")
+      }
+     })
+     
+     featuredWorksText.style.transform = `translate(0, 20px)`
+  })
+
+  return <>
+    <section className='w-full h-[120vh] bg-amber-950 relative'>
+    <div className='w-full h-fit text-center text-5xl sm:text-[5.5rem] md:text-[12rem] align-text-bottom text-nowrap absolute top-[30%] opacity-20 z-1' id='featuredWorksText'>FEATURED WORKS</div>
+    <div className='w-[90vw] md:w-[85vw] h-[120vh] bg-amber-100X absolute right-[50%] translate-x-[50%]'> </div>
+    </section>
   </>
+
 }
 
 export default FeaturedWorks
