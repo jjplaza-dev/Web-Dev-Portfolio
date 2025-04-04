@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react'
 
-function FeaturedWorks() {
+function Workflow() {
 
   /* useEffect(() => {
     const worksBox = document.querySelectorAll('#worksBox');
@@ -65,29 +65,29 @@ function FeaturedWorks() {
 
 
   useEffect (() => {
-     const featuredWorksText =  document.getElementById("featuredWorksText")
+     const featuredWorkss =  document.getElementById("featuredWorkss")
      
 
      
 
      window.addEventListener("scroll", () => {
-      const featuredWorksBox = document.getElementById("featuredWorksBox").getBoundingClientRect()
-      console.log(`${((featuredWorksBox.y+featuredWorksBox.height/2)-window.innerHeight/2)* -1}px`)
+      const featuredWorkssBox = document.getElementById("featuredWorkssBox").getBoundingClientRect()
+      console.log(`${((featuredWorkssBox.y+featuredWorkssBox.height/2)-window.innerHeight/2)* -1}px`)
       
     
-      featuredWorksText.style.transform = `translate(0, ${((featuredWorksBox.y+featuredWorksBox.height/2)-window.innerHeight/2)* -1}px)`
+      featuredWorkss.style.transform = `translate(0, ${((featuredWorkssBox.y+featuredWorkssBox.height/2)-window.innerHeight/2)* -1}px)`
 
 
      })
   })
 
   return <>
-    <section className='w-full h-[100vh] bg-amber-950 relative overflow-hidden'>
-    <div className='w-full h-fit text-center text-5xl sm:text-[5.5rem] md:text-[12rem] align-text-bottom text-nowrap absolute top-[30%] opacity-20 z-1 duration-500 delay-0 ease-out transition-all' id='featuredWorksText'>FEATURED WORKS</div>
-    <div className='w-[90vw] md:w-[85vw] h-full bg-amber-100X absolute right-[50%] translate-x-[50%] bg-amber-50' id='featuredWorksBox'> </div>
+    <section className='w-full h-[100vh] bg-blue-400 relative overflow-hidden'>
+    <div className='w-full h-fit text-center text-5xl sm:text-[5.5rem] md:text-[12rem] align-text-bottom text-nowrap absolute top-[30%] opacity-20 z-1 duration-500 delay-0 ease-out transition-all text-black' id='featuredWorkss'>WORKFLOW</div>
+    <div className='w-[90vw] md:w-[85vw] h-full bg-amber-100X absolute right-[50%] translate-x-[50%]' id='featuredWorkssBox'> </div>
     </section>
   </>
 
 }
 
-export default FeaturedWorks
+export default Workflow
