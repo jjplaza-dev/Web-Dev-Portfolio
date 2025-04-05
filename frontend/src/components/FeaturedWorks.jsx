@@ -83,8 +83,18 @@ function FeaturedWorks() {
 
   return <>
     <section className='w-full h-[100vh] bg-amber-950 relative overflow-hidden'>
-    <div className='w-full h-fit text-center text-5xl sm:text-[5.5rem] md:text-[12rem] align-text-bottom text-nowrap absolute top-[30%] opacity-20 z-1 duration-500 delay-0 ease-out transition-all' id='featuredWorksText'>FEATURED WORKS</div>
-    <div className='w-[90vw] md:w-[85vw] h-full bg-amber-100X absolute right-[50%] translate-x-[50%] bg-amber-50' id='featuredWorksBox'> </div>
+    <div className='w-[90vw] md:w-[85vw] h-full bg-amber-100X absolute right-[50%] translate-x-[50%] bg-amber-50' id='featuredWorksBox'>
+      <div className='w-full md:w-5/12 h-full bg-amber-300 flex flex-col justify-around align-middle items-center'> 
+        <button className='w-7/12 h-[100px] border-2 border-black box-border z-2 '> TEST PROJ HERE</button>
+        <button className='w-7/12 h-[100px] border-2 border-black box-border z-2 '> TEST PROJ HERE</button>
+        <button className='w-7/12 h-[100px] border-2 border-black box-border z-2 '> TEST PROJ HERE</button>
+        <button className='w-7/12 h-[100px] border-2 border-black box-border z-2 '> TEST PROJ HERE</button>
+        <button className='w-7/12 h-[100px] border-2 border-black box-border z-2 '> TEST PROJ HERE</button>
+        <button className='w-7/12 h-[100px] border-2 border-black box-border z-2 '> TEST PROJ HERE</button>
+      </div>
+    </div>
+    <div className='w-full h-fit text-center text-7xl sm:text-[5.5rem] md:text-[12rem] align-text-bottom absolute top-[30%] opacity-20 z-1 duration-500 delay-0 ease-out transition-all text-wrap sm:text-nowrap select-none' id='featuredWorksText'>FEATURED WORKS</div>
+   
     </section>
   </>
 

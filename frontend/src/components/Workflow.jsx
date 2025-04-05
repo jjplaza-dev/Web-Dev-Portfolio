@@ -83,11 +83,11 @@ function Workflow() {
 
   return <>
     <section className='w-full h-[100vh] bg-blue-400 relative overflow-hidden'>
-    <div className='w-full h-fit text-center text-5xl sm:text-[5.5rem] md:text-[12rem] align-text-bottom text-nowrap absolute top-[30%] opacity-20 z-1 duration-500 delay-0 ease-out transition-all text-black' id='featuredWorkss'>WORKFLOW</div>
+    <div className='w-full h-fit text-center text-7xl sm:text-[5.5rem] md:text-[12rem] align-text-bottom text-nowrap absolute top-[30%] opacity-20 z-1 duration-500 delay-0 ease-out transition-all text-black' id='featuredWorkss'>WORKFLOW</div>
     <div className='w-[90vw] md:w-[85vw] h-full bg-amber-100X absolute right-[50%] translate-x-[50%]' id='featuredWorkssBox'> </div>
     </section>
   </>
 
 }
 
-export default Workflow
+export default Workflow 

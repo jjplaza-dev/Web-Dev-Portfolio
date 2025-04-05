@@ -44,7 +44,7 @@ function Cursor() {
 
   return (
     <div
-      className='w-10 aspect-square  fixed top-0 left-0 pointer-events-none duration-50 z-2'
+      className='w-10 aspect-square  fixed top-0 left-0 pointer-events-none duration-80 z-2'
       style={{ transform: `translate(${position.x - 20}px, ${position.y - 20}px)`, width: `${curSize.x}px`, height: `${curSize.y}px` }}
       id='cursorBox'
     >
