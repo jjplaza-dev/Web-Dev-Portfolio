@@ -1,4 +1,8 @@
 import React, { useEffect, useRef, useState } from 'react'
+import apocalypse from "/src/assets/apocalypse.png"
+import cyber from "/src/assets/cyber.png"
+import quaint from "/src/assets/quaint.png"
+import waterway from "/src/assets/waterway.jpg"
 
 function FeaturedWorks() {
 
@@ -66,9 +70,6 @@ function FeaturedWorks() {
 
   useEffect (() => {
      const featuredWorksText =  document.getElementById("featuredWorksText")
-     
-
-     
 
      window.addEventListener("scroll", () => {
       const featuredWorksBox = document.getElementById("featuredWorksBox").getBoundingClientRect()
@@ -81,16 +82,39 @@ function FeaturedWorks() {
      })
   })
 
+  
+
+  const [hoveredIndex, setHoveredIndex] = useState(null);
+  const bgPics = [apocalypse, cyber, quaint, waterway]
+  const items = [0, 1, 2, 3]; // could be dynamic too
+
+  const getClipPath = (index) => {
+    return hoveredIndex === index
+      ? 'polygon(150% 0%,-50% 0%, 0% 100%, 100% 100%)'
+      : 'polygon(100% 0%, 0% 0%, 5% 100%, 95% 100%)';
+  };
+
   return <>
-    <section className='w-full h-[100vh] bg-amber-950 relative overflow-hidden'>
-    <div className='w-[90vw] md:w-[85vw] h-full bg-amber-100X absolute right-[50%] translate-x-[50%] bg-amber-50' id='featuredWorksBox'>
-      <div className='w-full md:w-5/12 h-full bg-amber-300 flex flex-col justify-around align-middle items-center'> 
-        <button className='w-7/12 h-[100px] border-2 border-black box-border z-2 '> TEST PROJ HERE</button>
-        <button className='w-7/12 h-[100px] border-2 border-black box-border z-2 '> TEST PROJ HERE</button>
-        <button className='w-7/12 h-[100px] border-2 border-black box-border z-2 '> TEST PROJ HERE</button>
-        <button className='w-7/12 h-[100px] border-2 border-black box-border z-2 '> TEST PROJ HERE</button>
-        <button className='w-7/12 h-[100px] border-2 border-black box-border z-2 '> TEST PROJ HERE</button>
-        <button className='w-7/12 h-[100px] border-2 border-black box-border z-2 '> TEST PROJ HERE</button>
+    <section className='w-full h-[200vh] sm:h-[200vh] md:h-[80vh] bg-amber-950 relative overflow-hidden'>
+    <div className='w-[100vw] md:w-full h-full bg-amber-100 ' id='featuredWorksBox'>
+      <div className="w-full h-[100%] items-center justify-center flex flex-col md:flex-row">
+        {items.map((item, index) => (
+          <div key={index} className="w-[100%] md:w-[25%] h-full bg-amber-100 transition-all duration-300 ease-in-out grayscale-90 hover:grayscale-0 overflow-hidden z-1 hover:z-2"
+            onMouseEnter={() => setHoveredIndex(index)}
+            onMouseLeave={() => setHoveredIndex(null)}
+            style={{
+              clipPath: getClipPath(index),
+              transition: 'clip-path 0.3s ease-in-out',
+              WebkitClipPath: getClipPath(index),
+            }}
+          >
+            <img
+              src={bgPics[index]}
+              alt={`apocalypse-${index}`}
+              className="w-full h-full object-cover"
+            />
+          </div>
+        ))}
       </div>
     </div>
     <div className='w-full h-fit text-center text-7xl sm:text-[5.5rem] md:text-[12rem] align-text-bottom absolute top-[30%] opacity-20 z-1 duration-500 delay-0 ease-out transition-all text-wrap sm:text-nowrap select-none' id='featuredWorksText'>FEATURED WORKS</div>
