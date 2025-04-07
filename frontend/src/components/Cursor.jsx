@@ -29,14 +29,14 @@ function Cursor() {
   
       window.addEventListener('mousemove', handleMouseMove);
       buttons.forEach(button => {
-        button.addEventListener('mouseenter', handleMouseEnter);
+        button.addEventListener('mousemove', handleMouseEnter);
         button.addEventListener('mouseleave', handleMouseLeave);
       });
       
       return () => {
         window.removeEventListener('mousemove', handleMouseMove);
         buttons.forEach(button => {
-          button.removeEventListener('mouseenter', handleMouseEnter);
+          button.removeEventListener('mousemove', handleMouseEnter);
           button.removeEventListener('mouseleave', handleMouseLeave);
         });
       };
