@@ -76,30 +76,38 @@ function FeaturedWorks() {
 
 
   return <>
-    <section className='w-[85vw] md:w-[80vw] md:mx-auto h-[100vh] sm:h-[120vh] md:h-[80vh] relative overflow-hidden'>
-    <div className='w-full md:w-full h-full grid grid-cols-1 md:grid-cols-2' id='featuredWorksBox'>
-      <div className='w-full h-[25vh] sm:h-[100%] md:w-full md:h-full relative border-1 box-border'>
-        <button className='w-6/12 h-3/12 sm:h-3/12 sm:w-12/12 md:w-6/12 z-2 hover:w-9/12 hover:h-9/12 ease-in-out transition-all duration-300 bg-blue-200 md:absolute right-0 md:bottom-0 '>
-          <div> Project </div>
+    <section className='w-full md:w-full md:mx-auto h-[150vh] sm:h-[120vh] md:h-[80vh] relative overflow-hidden'>
+    <div className='w-[85vw] md:w-[90vw] h-full grid grid-cols-1 md:grid-cols-2 mx-auto' id='featuredWorksBox'>
+      <div className='w-full h-[25vh] sm:h-[100%] md:w-full md:h-full relative'>
+        
+        <button className='w-full h-full sm:h-3/12 sm:w-12/12 md:w-6/12 z-2 hover:w-11/12 hover:h-12/12 ease-in-out transition-all duration-300 bg-blue-200 md:absolute md:right-0 md:bottom-0 '>
+          <div className='absolute top-0 left-0 m-1'>2025</div>
+          <div className='text-4xl'> Project Name </div>
         </button>
       </div>
-      <div className='w-full h-[25vh] sm:h-[100%] md:w-full md:h-full relative border-1 box-border'>
-        <button className='w-6/12 h-3/12 sm:h-3/12 sm:w-12/12 md:w-6/12 z-2 hover:w-9/12 hover:h-9/12 ease-in-out transition-all duration-300 bg-blue-200 md:absolute md:bottom-0 '>
-          <div> Project </div>
+      <div className='w-full h-[25vh] sm:h-[100%] md:w-full md:h-full relative'>
+        
+        <button className='w-full h-full sm:h-3/12 sm:w-12/12 md:w-6/12 z-2 hover:w-11/12 hover:h-12/12 ease-in-out transition-all duration-300 bg-blue-200 md:absolute md:bottom-0 '>
+          <div className='absolute top-0 left-0 m-1'>2025</div>
+          <div className='text-4xl'> Project Name </div>
         </button>
       </div>
-      <div className='w-full h-[25vh] sm:h-[100%] md:w-full md:h-full relative border-1 box-border'>
-        <button className='w-6/12 h-3/12 sm:h-3/12 sm:w-12/12 md:w-6/12 z-2 hover:w-9/12 hover:h-9/12 ease-in-out transition-all duration-300 bg-blue-200 md:absolute md:right-0 '>
-          <div> Project </div>
+      <div className='w-full h-[25vh] sm:h-[100%] md:w-full md:h-full relative'>
+        
+        <button className='w-full h-full sm:h-3/12 sm:w-12/12 md:w-6/12 z-2 hover:w-11/12 hover:h-12/12 ease-in-out transition-all duration-300 bg-blue-200 md:absolute md:right-0 '>
+          <div className='absolute top-0 left-0 m-1'>2025</div>
+          <div className='text-4xl'> Project Name </div>
         </button>
       </div>
-      <div className='w-full h-[25vh] sm:h-[100%] md:w-full md:h-full relative border-1 box-border'>
-        <button className='w-6/12 h-3/12 sm:h-3/12 sm:w-12/12 md:w-6/12 z-2 hover:w-9/12 hover:h-9/12 ease-in-out transition-all duration-300 bg-blue-200 md:absolute  '>
-          <div> Project </div>
+      <div className='w-full h-[25vh] sm:h-[100%] md:w-full md:h-full relative'>
+        
+        <button className='w-full h-full sm:h-3/12 sm:w-12/12 md:w-6/12 z-2 hover:w-11/12 hover:h-12/12 ease-in-out transition-all duration-300 bg-blue-200 md:absolute  '>
+          <div className='absolute top-0 left-0 m-1'>2025</div>
+          <div className='text-4xl'> Project Name </div>
         </button>
       </div>
     </div>
-    <div className='w-full h-fit text-center text-7xl text-white mix-blend-difference sm:text-[5.5rem] md:text-[12rem] align-text-bottom absolute top-[30%] opacity-80 z-1 duration-500 delay-0 ease-out transition-all text-wrap sm:text-nowrap select-none' id='featuredWorksText'>FEATURED WORKS</div>
+    <div className='w-fit h-[80vh] text-center text-2xl text-white mix-blend-difference sm:text-[2rem] md:text-[2.5rem] align-text-bottom absolute top-[0%] right-[1%] opacity-80 z-1 duration-500 delay-0 ease-out transition-all text-wrap tracking-[-1px]' style={{textOrientation: "upright", writingMode: "vertical-rl"}} id='featuredWorksText'>FEATURED WORKS</div>
    
     </section>
   </> 
