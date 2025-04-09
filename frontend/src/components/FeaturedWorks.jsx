@@ -76,8 +76,47 @@ function FeaturedWorks() {
 
 
   return <>
-    <section className='w-full md:w-full md:mx-auto h-[150vh] sm:h-[120vh] md:h-[80vh] relative overflow-hidden'>
-    <div className='w-[85vw] md:w-[90vw] h-full grid grid-cols-1 md:grid-cols-2 mx-auto' id='featuredWorksBox'>
+    <section className='w-full block md:hidden md:w-full md:mx-auto h-[150vh] sm:h-[120vh]'>
+    <div className='w-[85vw] md:w-[90vw] h-full grid grid-cols-1 md:grid-cols-2 mx-auto relative'>
+      <div className='w-full h-[10vh] bg-amber-400 sticky top-[5vh] z-1'> THIS IS IT </div>
+      <div className='w-full h-[25vh] sm:h-[100%] md:w-full md:h-full relative'>
+        
+        <button className='w-full h-full sm:h-3/12 sm:w-12/12 md:w-6/12 z-2 ease-in-out transition-all duration-300 bg-blue-200 md:absolute md:right-0 md:bottom-0 '>
+          <div className='absolute top-0 left-0 m-1'>2025</div>
+          <div className='text-4xl'> Project Name </div>
+        </button>
+      </div>
+      <div className='w-full h-[25vh] sm:h-[100%] md:w-full md:h-full relative'>
+        
+        <button className='w-full h-full sm:h-3/12 sm:w-12/12 md:w-6/12 z-2 ease-in-out transition-all duration-300 bg-blue-200 md:absolute md:bottom-0 '>
+          <div className='absolute top-0 left-0 m-1'>2025</div>
+          <div className='text-4xl'> Project Name </div>
+        </button>
+      </div>
+      <div className='w-full h-[25vh] sm:h-[100%] md:w-full md:h-full relative'>
+        
+        <button className='w-full h-full sm:h-3/12 sm:w-12/12 md:w-6/12 z-2 ease-in-out transition-all duration-300 bg-blue-200 md:absolute md:right-0 '>
+          <div className='absolute top-0 left-0 m-1'>2025</div>
+          <div className='text-4xl'> Project Name </div>
+        </button>
+      </div>
+      <div className='w-full h-[25vh] sm:h-[100%] md:w-full md:h-full relative'>
+        
+        <button className='w-full h-full sm:h-3/12 sm:w-12/12 md:w-6/12 z-2 ease-in-out transition-all duration-300 bg-blue-200 md:absolute  '>
+          <div className='absolute top-0 left-0 m-1'>2025</div>
+          <div className='text-4xl'> Project Name </div>
+        </button>
+      </div>
+    </div>
+    
+   
+
+
+    </section>
+
+    <section className='w-full hidden md:block md:w-full md:mx-auto h-[150vh] sm:h-[120vh] md:h-[120vh] relative overflow-hidden'>
+    <div className='w-[85vw] md:w-[90vw] h-[80vh] grid grid-cols-1 md:grid-cols-2 bg-amber-200 my-auto mx-auto' id='featuredWorksBox'>
+
       <div className='w-full h-[25vh] sm:h-[100%] md:w-full md:h-full relative'>
         
         <button className='w-full h-full sm:h-3/12 sm:w-12/12 md:w-6/12 z-2 hover:w-11/12 hover:h-12/12 ease-in-out transition-all duration-300 bg-blue-200 md:absolute md:right-0 md:bottom-0 '>
