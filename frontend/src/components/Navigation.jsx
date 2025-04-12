@@ -1,19 +1,13 @@
-import React from "react";
+import React from 'react'
 
 function Navigation() {
   return <>
-    <section className="fixed w-full md:w-[5vw] h-[5vh] md:h-full top-0 md:left-0 z-2">
-      <div className="w-full md:w-fit h-full md:h-full border-sticky top-0 flex justify-center border-r-1 border-black items-center backdrop-blur-md bg-white/80">
-        <nav className="w-full sm:w-7/12 md:w-[5vw] h-full flex md:flex-col items-center justify-center">
-          <button className="w-25 sm:w-30 md:w-full h-1/12">About</button>
-          <button className="w-25 sm:w-30 md:w-full h-1/12">Works</button>
-          <button className="w-25 sm:w-30 md:w-full h-1/12">Contact</button>
-        </nav>
-      </div>
+    <section className='w-full h-[10vh] sm:h-[12vh] fixed flex justify-end top-0 bg-blue-200 z-1'>
+        <div className='h-full aspect-square  relative'>
+            <button className='w-[75%] h-[75%] bg-amber-200 absolute right-[50%] bottom-[50%] translate-x-[50%] translate-y-[50%] '><h4 className='mix-blend-difference relative text-white z-3'>Burger</h4></button>
+        </div>
     </section>
   </>
-    
-  
 }
 
-export default Navigation;
+export default Navigation

@@ -1,9 +1,8 @@
 import Cursor from "./components/Cursor"
-import FeaturedWorks from "./components/FeaturedWorks"
 import Loadscreen from "./components/Loadscreen"
 import Navigation from "./components/Navigation"
-import Workflow from "./components/Workflow"
-import Front from "./pages/Front"
+import Works from "./components/Works"
+import Front from "./components/Front"
 import Ruler from "./Ruler"
 
 
@@ -11,15 +10,14 @@ import Ruler from "./Ruler"
 function App() {
 
   return <> 
-  <main className="bg-white">
     <Ruler />
     <Loadscreen />
-    <Navigation />
-    <Front />
     <Cursor />
-    <FeaturedWorks/>
-    <Workflow />
-  </main>
+
+    <Navigation />
+    <Front/>
+    <Works />
+    
   </>
   
 } 

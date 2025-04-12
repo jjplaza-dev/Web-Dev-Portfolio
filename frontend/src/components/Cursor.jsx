@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef, use } from 'react';
 
 function Cursor() {
     const [position, setPosition] = useState({ x: 0, y: 0 });
@@ -12,15 +12,16 @@ function Cursor() {
         if (!isHoveringButtonRef.current) {
           setPosition({ x: e.clientX, y: e.clientY });
           setCurSize({x: 40, y: 40})
+       
         }
       };
   
       const handleMouseEnter = (e) => {
         const rect = e.target.getBoundingClientRect();
-        setPosition({ x: rect.x + 20, y: rect.y + 20 });
-        setCurSize({ x: rect.width, y: rect.height });
+        setPosition({ x: (rect.x + 20)-rect.width*0.05, y: (rect.y + 20)-rect.height*0.05 });
+        setCurSize({ x: rect.width*1.1, y: rect.height*1.1 });
         isHoveringButtonRef.current = true;
-       
+        
       };
   
       const handleMouseLeave = () => {
@@ -48,10 +49,11 @@ function Cursor() {
       style={{ transform: `translate(${position.x - 20}px, ${position.y - 20}px)`, width: `${curSize.x}px`, height: `${curSize.y}px` }}
       id='cursorBox'
     >
-        <div className='w-4/12 h-4/12 absolute top-0 border-2 border-b-0 border-r-0 border-blue-700'>✘</div>
-        <div className='w-4/12 h-4/12 absolute bottom-0 border-2 border-t-0 border-r-0 border-blue-700'></div>
-        <div className='w-4/12 h-4/12 absolute right-0 border-2 border-b-0 border-l-0 border-blue-700'></div>
-        <div className='w-4/12 h-4/12 absolute right-0 bottom-0 border-2 border-t-0 border-l-0 border-blue-700'></div>
+        <div className=' h-4/12 aspect-square absolute top-0 border-2 border-b-0 border-r-0 border-black'></div>
+        <div className=' h-4/12 aspect-square absolute bottom-0 border-2 border-t-0 border-r-0 border-black'></div>
+        <div className=' h-4/12 aspect-square absolute right-0 border-2 border-b-0 border-l-0 border-black'></div>
+        <div className=' h-4/12 aspect-square absolute right-0 bottom-0 border-2 border-t-0 border-l-0 border-black'></div>
+        <div className='w-3/12 h-3/12 hidden absolute right-[50%] bottom-[50%] translate-x-[50%] translate-y-[50%] bg-black z-1 transition-all duration-200 ease-in-out' style={{width: `${curSize.x}px`,height: `${curSize.y}px`, transform: `${isHoveringButtonRef.current? "scale(100%)": "scale(20%)"}`}}></div>
     </div>
   );
 }
