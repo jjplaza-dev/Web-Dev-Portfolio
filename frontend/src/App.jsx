@@ -4,6 +4,7 @@ import Navigation from "./components/Navigation"
 import Works from "./components/Works"
 import Front from "./components/Front"
 import Ruler from "./Ruler"
+import Footer from "./components/Footer"
 
 
 
@@ -17,6 +18,7 @@ function App() {
     <Navigation />
     <Front/>
     <Works />
+    <Footer />
     
   </>
   
