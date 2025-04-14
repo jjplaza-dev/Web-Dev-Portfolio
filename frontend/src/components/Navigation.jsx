@@ -15,7 +15,6 @@ function Navigation() {
 
   const openMenu = () => {
     setActiveMenu(!activeMenu)
-    console.log(panelWidth)
   }
 
   const panelWidth = isMobile? activeMenu? '100vw':'0vw': activeMenu? '50vw':'0vw';
