@@ -5,6 +5,7 @@ import Works from "./components/Works"
 import Front from "./components/Front"
 import Ruler from "./Ruler"
 import Footer from "./components/Footer"
+import Services from "./components/Services"
 
 
 
@@ -14,10 +15,10 @@ function App() {
     <Ruler />
     <Loadscreen />
     <Cursor />
-
     <Navigation />
     <Front/>
     <Works />
+    <Services/>
     <Footer />
     
   </>

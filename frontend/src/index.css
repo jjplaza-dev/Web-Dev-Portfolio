@@ -147,6 +147,7 @@ button {
     article {
       grid-template-columns: min(40%, 40rem) 1fr;
     }
+    
   
     article > img {
       grid-row: 1 / 4;
