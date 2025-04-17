@@ -6,6 +6,7 @@ import Front from "./components/Front"
 import Ruler from "./Ruler"
 import Footer from "./components/Footer"
 import Services from "./components/Services"
+import Workflow from "./components/Workflow"
 
 
 
@@ -19,6 +20,7 @@ function App() {
     <Front/>
     <Works />
     <Services/>
+    <Workflow />
     <Footer />
     
   </>
