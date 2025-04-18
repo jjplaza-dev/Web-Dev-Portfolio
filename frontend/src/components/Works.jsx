@@ -1,10 +1,11 @@
-import React, { useState, useRef, useEffect, use } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import WorkBox from '../page.components/WorkBox';
 
 function Works() {
   const [selectedProject, setSelectedProject] = useState(null);
   const [hoveredIndex, setHoveredIndex] = useState(null);
-  const [relativePos, setRelativePos] = useState()
+  const [relativePosX, setRelativePosX] = useState()
+  const [relativePosY, setRelativePosY] = useState()
   const buttonRefs = useRef([]);
 
   
@@ -25,7 +26,8 @@ function Works() {
     const rect = buttonRefs.current[index].getBoundingClientRect();
 
     buttonRefs.current[index].addEventListener("mousemove", (e) => {
-      setRelativePos(((e.clientX - rect.x) / rect.width) * 10)
+      setRelativePosX(((e.clientX - rect.x) / rect.width) * 10)
+      setRelativePosY((((e.clientY - rect.y) / rect.height) * 10))
     })
   }
 
@@ -46,7 +48,7 @@ function Works() {
               >
                 [{index}] Project Name
               </button>
-              <WorkBox isHidden={hoveredIndex !== index} boxPos={hoveredIndex} pos={relativePos}/>
+              <WorkBox isHidden={hoveredIndex !== index} boxPos={hoveredIndex} posX={relativePosX} posY={relativePosY}/>
             </div>
           ))}
         </div>

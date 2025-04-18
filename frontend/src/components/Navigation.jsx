@@ -19,6 +19,7 @@ function Navigation() {
 
   const panelWidth = isMobile? activeMenu? '100vw':'0vw': activeMenu? '50vw':'0vw';
   const navPos = activeMenu? "0%":"100%";
+  const navCover = activeMenu? "block":"none";
 
   
 
@@ -41,6 +42,7 @@ function Navigation() {
               <button className='w-[50%] h-[50%]'>NAVIGATION BUTTON</button>
           </nav>
        </div>
+       <div className='w-screen h-screen absolute bg-black opacity-80' onClick={openMenu} style={{display: `${navCover}`}}></div>
     </section>
   </>
 }
