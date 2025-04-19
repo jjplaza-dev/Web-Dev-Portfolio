@@ -34,12 +34,15 @@ function Services() {
 
   return (
     <>
-      <section className='w-full screen h-fit bg-red-200'>
-        <h2 className='text-3xl font-bold mb-4'>My Services</h2>
-        <p className='text-lg mb-6'>I craft clean, efficient, and user-friendly websites tailored to your specific needs. My focus is on creating modern, responsive designs that deliver exceptional user experiences. My expertise spans the entire web development lifecycle, from initial concept and design to final deployment and beyond.</p>
+      <section className='w-full h-fit bg-red-200'>
+        <h2 className='text-3xl font-bold p-5'>[ My Services ]</h2>
+        <p className='w-full text-lg p-5'>I craft clean, efficient, and user-friendly websites tailored to your specific needs. My focus is on creating modern, responsive designs that deliver exceptional user experiences. My expertise spans the entire web development lifecycle, from initial concept and design to final deployment and beyond.</p>
         <div className='w-full h-fit bg-amber-50 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 p-5 box-border'>
           {serviceArr.map((service, index) => (
-            <div className='w-full h-fit border-1 border-gray-300 rounded-[5px] p-5 shadow-2xl' key={index}>{service.title}<br/>{service.text}</div>
+            <div className='w-full aspect-[2/1] border-1 bg-white hover:bg-amber-100 transition-all ease-in-out duration-200 border-gray-300 rounded-[5px] shadow-2xl' key={index}> 
+              <div className='w-full h-[55%] bg-amber-200'></div> 
+              <div className='p-5'><b>{service.title}</b><br/>{service.text}</div>
+            </div>
           ))}
         </div>
       </section>
