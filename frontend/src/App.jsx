@@ -7,6 +7,7 @@ import Ruler from "./Ruler"
 import Footer from "./components/Footer"
 import Services from "./components/Services"
 import Workflow from "./components/Workflow"
+import Skills from "./components/Skills"
 
 
 
@@ -21,6 +22,7 @@ function App() {
     <Works />
     <Services/>
     <Workflow />
+    <Skills />
     <Footer />
     
   </>

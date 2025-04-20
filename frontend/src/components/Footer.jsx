@@ -1,35 +1,30 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 
 function Footer() {
-  const [divBend, setDivBend] = useState(0); // Initialize with a default value
+  const innerFooterBoxRef = useRef(null);
+  const [myScale, setMyScale] = useState()
 
   useEffect(() => {
-    const footerBox = document.getElementById("footerBox");
-
     const handleScroll = () => {
-      if (footerBox) { // Check if footerBox is not null
-        const rect = footerBox.getBoundingClientRect();
-        setDivBend((90 / rect.y) * 80);
+      if (innerFooterBoxRef.current) {
+        const innerFooterBox = innerFooterBoxRef.current.getBoundingClientRect();
+        setMyScale(((innerFooterBox.height - innerFooterBox.y)/innerFooterBox.height)*100)
       }
     };
 
-    window.addEventListener("scroll", handleScroll);
+    window.addEventListener('scroll', handleScroll);
 
-    // Cleanup function to remove the event listener
+    // Cleanup the event listener
     return () => {
-      window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener('scroll', handleScroll);
     };
-  }, []); // Empty dependency array to run only on mount and unmount
+  }, []); // Empty dependency array ensures this runs only once on mount
 
   return (
     <>
-      <section className='w-screen h-screen bg-amber-300 relative'> 
-        <div 
-          className='ellipse w-full h-[90%] absolute bottom-0 bg-amber-200 ease-out duration-500' 
-          style={{ clipPath: `ellipse(100% ${divBend}% at bottom center)` }} 
-          id='footerBox'
+      <section className='w-screen h-screen bg-amber-300 flex justify-center items-center' ref={innerFooterBoxRef}>
+        <div className='h-100 w-100 bg-amber-800' style={{ transform: `scale(${100 + myScale}%)` }}  // Use ref to access the DOM element
         ></div>
-        <div className='w-full h-[10%] bg-white absolute bottom-0'></div>
       </section>
     </>
   );

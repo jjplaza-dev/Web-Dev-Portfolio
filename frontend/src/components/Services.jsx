@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 
 function Services() {
   const serviceArr = [
@@ -26,22 +26,36 @@ function Services() {
       text: "Implementing best practices to improve your website's search engine ranking and visibility."
     }
     
-    
-    
-    
-    
   ];
+
+  const [onScreen, setOnScreen] = useState(false)
+  
+
+  useEffect(() => {
+    const serviceBoxes = document.querySelectorAll("#serviceBox")
+
+    window.addEventListener("scroll",(e) => {
+      serviceBoxes.forEach((element, index) => {
+        if(element.getBoundingClientRect().y <= window.innerHeight/2){
+          setOnScreen(true)
+        }
+     
+      });
+    })
+  })
 
   return (
     <>
-      <section className='w-full h-fit bg-red-200'>
+      <section className='w-full h-fit bg-red-200' id='servicesBox'>
         <h2 className='text-3xl font-bold p-5'>[ My Services ]</h2>
         <p className='w-full text-lg p-5'>I craft clean, efficient, and user-friendly websites tailored to your specific needs. My focus is on creating modern, responsive designs that deliver exceptional user experiences. My expertise spans the entire web development lifecycle, from initial concept and design to final deployment and beyond.</p>
         <div className='w-full h-fit bg-amber-50 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 p-5 box-border'>
           {serviceArr.map((service, index) => (
-            <div className='w-full aspect-[2/1] border-1 bg-white hover:bg-amber-100 transition-all ease-in-out duration-200 border-gray-300 rounded-[5px] shadow-2xl' key={index}> 
-              <div className='w-full h-[55%] bg-amber-200'></div> 
-              <div className='p-5'><b>{service.title}</b><br/>{service.text}</div>
+            <div className='w-full h-fit overflow-hidden hover:bg-amber-100 transition-all ease-in-out duration-300 rounded-[5px] relative' key={index} id='serviceBox'> 
+              <div className={`w-full h-full transition-all duration-500 border-1 border-black `} style={{transform: `translateY(${onScreen? 0:100}%)`}}>
+                <div className='w-full aspect-[2/0.5] bg-amber-200'></div> 
+                <div className='p-5'><b>{service.title}</b><br/>{service.text}</div>
+              </div>
             </div>
           ))}
         </div>
