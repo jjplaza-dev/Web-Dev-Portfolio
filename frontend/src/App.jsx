@@ -8,22 +8,26 @@ import Footer from "./components/Footer"
 import Services from "./components/Services"
 import Workflow from "./components/Workflow"
 import Skills from "./components/Skills"
+import CTA from "./components/CTA"
 
 
 
 function App() {
 
   return <> 
-    <Ruler />
-    <Loadscreen />
-    <Cursor />
-    <Navigation />
-    <Front/>
-    <Works />
-    <Services/>
-    <Workflow />
-    <Skills />
-    <Footer />
+    <section className="relative">
+      <Ruler />
+      <Loadscreen />
+      <Cursor />
+      <Navigation />
+      <Front/>
+      <Works />
+      <Services/>
+      <Workflow />
+      <CTA />
+      <Skills />
+      <Footer />
+    </section>
     
   </>
   
