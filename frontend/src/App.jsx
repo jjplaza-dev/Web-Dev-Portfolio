@@ -15,7 +15,7 @@ import CTA from "./components/CTA"
 function App() {
 
   return <> 
-    <section className="relative">
+    <section className="relative ">
       <Ruler />
       <Loadscreen />
       <Cursor />
