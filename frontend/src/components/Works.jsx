@@ -37,10 +37,10 @@ function Works() {
       <div className="w-full h-[80vh] sm:h-[70vh] bg-green-200">
         <div className="w-full h-full md:h-full bg-amber-200  flex flex-col justify-around items-center" id="worksBoxContainer">
           {[1, 2, 3, 4].map((index) => (
-            <div key={index} className={`w-full bg-amber-100 border-1 border-black box-border flex justify-center lg:justify-start items-center duration-300 ${selectedProject === index ? 'h-[100vh] lg:h-[25%]' : 'h-[25%]'}`}>
+            <div key={index} className={`w-full bg-amber-100 border-t-5 border-black box-border flex justify-center lg:justify-start items-center duration-300 ${selectedProject === index ? 'h-[100vh] lg:h-[25%]' : 'h-[25%]'}`}>
               <button
                 ref={el => buttonRefs.current[index] = el}
-                className="w-10/12 lg:w-5/12 h-9/12 text-nowrap font-thin tf2 lg:ml-20 bg-amber-100"
+                className="w-12/12 lg:w-5/12 h-12/12 lg:h-9/12 text-nowrap font-thin tf2 lg:ml-20 bg-amber-100"
                 onClick={() => handleClick(index)}
                 onMouseMove={() => handleMouseMove(index)}
                 onMouseEnter={() => handleMouseEnter(index)}

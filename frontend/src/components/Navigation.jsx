@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react'
 function Navigation() {
   const [activeMenu, setActiveMenu] = useState(false)
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 1023);
+  const [posYPercent, setPosYPercent] = useState()
 
   useEffect(() => {
     const handleResize = () => {
@@ -11,6 +12,7 @@ function Navigation() {
 
     window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize);
+
   }, []);
 
   const openMenu = () => {
@@ -21,14 +23,23 @@ function Navigation() {
   const navPos = activeMenu? "0%":"100%";
   const navCover = activeMenu? "block":"none";
 
+  useEffect(() => {
+    window.addEventListener('scroll', () => {
+      setPosYPercent((window.scrollY/window.innerHeight)*10)
+      console.log(posYPercent)
+    })
+  })
   
 
   return <>
-    <section className='w-full h-[10vh] sm:h-[12vh] fixed flex justify-end top-0 z-1'>
-        <div className='h-full aspect-square relative'>
-            <button className='w-[75%] h-[75%] bg-amber-200 absolute right-[50%] bottom-[50%] translate-x-[50%] translate-y-[50%] z-2' onClick={openMenu}><h4 className='mix-blend-difference relative text-white z-3'>Burger</h4></button>
+    <section className='w-full h-[12vh] fixed flex flex-col top-0 z-1 bg-amber-50'>
+        <div className='h-10/12 aspect-square self-end flex justify-center items-center'>
+            <button className='w-[75%] h-[75%] bg-amber-200  z-2' onClick={openMenu}><h4 className='mix-blend-difference relative text-white z-3'>Burger</h4></button>
         </div>
-       <div className=" h-[100vh] fixed right-0  z-1 duration-300 ease-in-out" style={{ width: panelWidth }}>
+        <div className='w-full h-2/12  border-y-5 border-black box-border'>
+        <div className='h-[100%] bg-green-700' style={{width: `${posYPercent}%`}}></div>
+        </div>
+       <div className=" h-[100vh] fixed right-0 z-1 duration-300 ease-in-out" style={{ width: panelWidth }}>
           <nav className='w-full h-[25%] flex justify-center items-center border-1 border-black bg-green-200 transition-all ease-in-out duration-400 delay-100' style={{marginLeft: `${navPos}`}}>
               <button className='w-[50%] h-[50%]'>NAVIGATION BUTTON</button>
           </nav>

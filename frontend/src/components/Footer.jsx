@@ -1,21 +1,26 @@
 import React, { useEffect, useState, useRef } from 'react';
 
 function Footer() {
-  const [posY, setPosY] = useState()
+  const [onBottom, setOnBottom] = useState()
   
 
   useEffect(() => {
     const footerBox = document.getElementById("footerBox")
     
     window.addEventListener("scroll", () => {
-      setPosY(100/footerBox.getBoundingClientRect().y)
+      if(footerBox.getBoundingClientRect().y <= footerBox.getBoundingClientRect().height/10) {
+        setOnBottom(true)
+        console.log("ON BOTTOM")
+      } else {
+        setOnBottom(false)
+      }
     })
   })
 
   return (
     <>
-      <section className='w-screen h-screen  absolute bottom-0 z-2' id='footerBox'>
-        <div className='w-[100%] h-[100%] bg-green-200 absolute bottom-0 transition-all duration-0 delay-0' style={{clipPath: `ellipse(${posY*100}% ${posY*100}% at bottom center)`}}></div>
+      <section className='w-screen h-[120vh] bg-green-100 absolute bottom-0 z-1 transition-all ease-out duration-300 delay-0' style={{clipPath: `ellipse(${onBottom? "100% 100% at bottom center" : "80% 80% at bottom center"})`}} id='footerBox'>
+        <div className='w-[100%] h-[80%] bg-green-200 absolute bottom-0 transition-all ease-in-out duration-300 delay-0' style={{clipPath: `ellipse(${onBottom? "80% 80%" : "60% 60%"} at bottom center)`}}></div>
       </section>
     </>
   );
