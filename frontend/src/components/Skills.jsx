@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import styles from "./Skills.module.css"
 
 function Skills() {
     const [scrollY, setScrollY] = useState()
@@ -19,12 +20,7 @@ function Skills() {
 
     useEffect(() => {
       const skillsBox = document.getElementById("skillsBox")
-   
-
-
-      
         window.addEventListener("scroll", () => {
-          
           if(skillsBox.getBoundingClientRect().y <= 0){
             setScrollY(skillsBox.getBoundingClientRect().y / skillsBox.getBoundingClientRect().height)
 
@@ -37,8 +33,6 @@ function Skills() {
           } else {
             setScrollY(0)
           }
-
-          
         })
       
     })
@@ -54,18 +48,72 @@ function Skills() {
           </div>
           <div className='w-full h-full '>
             <div className='w-full h-[50%] bg-red-200 transition-all ease-out duration-100 delay-10 border-1 border-black' style={{transform: `translateY(${scrollY*200}%)`}}>
-              <div className='w-full h-[20%] lg:h-[40%] absolute bottom-1 flex justify-around'>
-                {frontendSkills.map((skills, index) => (
-                  <div className='h-full aspect-video bg-red-100 mx-0.5 '>{skills.skill}</div>
-                ))}
-              </div>
+               <div className={styles.logos}>
+                  <div className={styles.logosSlide} id='logos-slide'>
+                    <img  src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-HL08fKj91NpIaYR41EttESOQJg_dxG9oXy8UnmP08tbDE9hdiCzPDncuTL3_A9__XOM&usqp=CAU'/>
+                    <img  src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-HL08fKj91NpIaYR41EttESOQJg_dxG9oXy8UnmP08tbDE9hdiCzPDncuTL3_A9__XOM&usqp=CAU'/>
+                    <img  src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-HL08fKj91NpIaYR41EttESOQJg_dxG9oXy8UnmP08tbDE9hdiCzPDncuTL3_A9__XOM&usqp=CAU'/>
+                    <img  src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-HL08fKj91NpIaYR41EttESOQJg_dxG9oXy8UnmP08tbDE9hdiCzPDncuTL3_A9__XOM&usqp=CAU'/>
+                    <img  src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-HL08fKj91NpIaYR41EttESOQJg_dxG9oXy8UnmP08tbDE9hdiCzPDncuTL3_A9__XOM&usqp=CAU'/>
+                    <img  src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-HL08fKj91NpIaYR41EttESOQJg_dxG9oXy8UnmP08tbDE9hdiCzPDncuTL3_A9__XOM&usqp=CAU'/>
+                    <img  src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-HL08fKj91NpIaYR41EttESOQJg_dxG9oXy8UnmP08tbDE9hdiCzPDncuTL3_A9__XOM&usqp=CAU'/>
+                    <img  src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-HL08fKj91NpIaYR41EttESOQJg_dxG9oXy8UnmP08tbDE9hdiCzPDncuTL3_A9__XOM&usqp=CAU'/>
+                    <img  src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-HL08fKj91NpIaYR41EttESOQJg_dxG9oXy8UnmP08tbDE9hdiCzPDncuTL3_A9__XOM&usqp=CAU'/>
+                    <img  src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-HL08fKj91NpIaYR41EttESOQJg_dxG9oXy8UnmP08tbDE9hdiCzPDncuTL3_A9__XOM&usqp=CAU'/>
+                    <img  src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-HL08fKj91NpIaYR41EttESOQJg_dxG9oXy8UnmP08tbDE9hdiCzPDncuTL3_A9__XOM&usqp=CAU'/>
+                    <img  src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-HL08fKj91NpIaYR41EttESOQJg_dxG9oXy8UnmP08tbDE9hdiCzPDncuTL3_A9__XOM&usqp=CAU'/>
+                    <img  src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-HL08fKj91NpIaYR41EttESOQJg_dxG9oXy8UnmP08tbDE9hdiCzPDncuTL3_A9__XOM&usqp=CAU'/>
+                    <img  src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-HL08fKj91NpIaYR41EttESOQJg_dxG9oXy8UnmP08tbDE9hdiCzPDncuTL3_A9__XOM&usqp=CAU'/>
+                    <img  src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-HL08fKj91NpIaYR41EttESOQJg_dxG9oXy8UnmP08tbDE9hdiCzPDncuTL3_A9__XOM&usqp=CAU'/>
+                    <img  src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-HL08fKj91NpIaYR41EttESOQJg_dxG9oXy8UnmP08tbDE9hdiCzPDncuTL3_A9__XOM&usqp=CAU'/>
+                    <img  src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-HL08fKj91NpIaYR41EttESOQJg_dxG9oXy8UnmP08tbDE9hdiCzPDncuTL3_A9__XOM&usqp=CAU'/>
+                    <img  src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-HL08fKj91NpIaYR41EttESOQJg_dxG9oXy8UnmP08tbDE9hdiCzPDncuTL3_A9__XOM&usqp=CAU'/>
+                    <img  src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-HL08fKj91NpIaYR41EttESOQJg_dxG9oXy8UnmP08tbDE9hdiCzPDncuTL3_A9__XOM&usqp=CAU'/>
+                    <img  src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-HL08fKj91NpIaYR41EttESOQJg_dxG9oXy8UnmP08tbDE9hdiCzPDncuTL3_A9__XOM&usqp=CAU'/>
+                    <img  src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-HL08fKj91NpIaYR41EttESOQJg_dxG9oXy8UnmP08tbDE9hdiCzPDncuTL3_A9__XOM&usqp=CAU'/>
+                    <img  src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-HL08fKj91NpIaYR41EttESOQJg_dxG9oXy8UnmP08tbDE9hdiCzPDncuTL3_A9__XOM&usqp=CAU'/>
+                    <img  src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-HL08fKj91NpIaYR41EttESOQJg_dxG9oXy8UnmP08tbDE9hdiCzPDncuTL3_A9__XOM&usqp=CAU'/>
+                    <img  src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-HL08fKj91NpIaYR41EttESOQJg_dxG9oXy8UnmP08tbDE9hdiCzPDncuTL3_A9__XOM&usqp=CAU'/>
+                    <img  src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-HL08fKj91NpIaYR41EttESOQJg_dxG9oXy8UnmP08tbDE9hdiCzPDncuTL3_A9__XOM&usqp=CAU'/>
+                    <img  src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-HL08fKj91NpIaYR41EttESOQJg_dxG9oXy8UnmP08tbDE9hdiCzPDncuTL3_A9__XOM&usqp=CAU'/>
+                    <img  src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-HL08fKj91NpIaYR41EttESOQJg_dxG9oXy8UnmP08tbDE9hdiCzPDncuTL3_A9__XOM&usqp=CAU'/>
+                    <img  src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-HL08fKj91NpIaYR41EttESOQJg_dxG9oXy8UnmP08tbDE9hdiCzPDncuTL3_A9__XOM&usqp=CAU'/>         
+                  </div>
+                </div>
             </div>
             <div className='w-full h-[50%] bg-red-200 transition-all ease-out duration-100 delay-10 border-1 border-black' style={{transform: `translateY(${scrollY*-200}%)`}}>
-              <div className='w-full h-[20%] lg:h-[40%] absolute top-1 flex justify-around'>
-                {frontendSkills.map((skills, index) => (
-                  <div className='h-full aspect-video bg-red-100 mx-0.5 '>{skills.skill}</div>
-                ))}
-              </div>
+            <div className={styles.logos} style={{top: "0", height: "fit-content"}}>
+                  <div className={styles.logosSlide} id='logos-slide'>
+                    <img  src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-HL08fKj91NpIaYR41EttESOQJg_dxG9oXy8UnmP08tbDE9hdiCzPDncuTL3_A9__XOM&usqp=CAU'/>
+                    <img  src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-HL08fKj91NpIaYR41EttESOQJg_dxG9oXy8UnmP08tbDE9hdiCzPDncuTL3_A9__XOM&usqp=CAU'/>
+                    <img  src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-HL08fKj91NpIaYR41EttESOQJg_dxG9oXy8UnmP08tbDE9hdiCzPDncuTL3_A9__XOM&usqp=CAU'/>
+                    <img  src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-HL08fKj91NpIaYR41EttESOQJg_dxG9oXy8UnmP08tbDE9hdiCzPDncuTL3_A9__XOM&usqp=CAU'/>
+                    <img  src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-HL08fKj91NpIaYR41EttESOQJg_dxG9oXy8UnmP08tbDE9hdiCzPDncuTL3_A9__XOM&usqp=CAU'/>
+                    <img  src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-HL08fKj91NpIaYR41EttESOQJg_dxG9oXy8UnmP08tbDE9hdiCzPDncuTL3_A9__XOM&usqp=CAU'/>
+                    <img  src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-HL08fKj91NpIaYR41EttESOQJg_dxG9oXy8UnmP08tbDE9hdiCzPDncuTL3_A9__XOM&usqp=CAU'/>
+                    <img  src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-HL08fKj91NpIaYR41EttESOQJg_dxG9oXy8UnmP08tbDE9hdiCzPDncuTL3_A9__XOM&usqp=CAU'/>
+                    <img  src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-HL08fKj91NpIaYR41EttESOQJg_dxG9oXy8UnmP08tbDE9hdiCzPDncuTL3_A9__XOM&usqp=CAU'/>
+                    <img  src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-HL08fKj91NpIaYR41EttESOQJg_dxG9oXy8UnmP08tbDE9hdiCzPDncuTL3_A9__XOM&usqp=CAU'/>
+                    <img  src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-HL08fKj91NpIaYR41EttESOQJg_dxG9oXy8UnmP08tbDE9hdiCzPDncuTL3_A9__XOM&usqp=CAU'/>
+                    <img  src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-HL08fKj91NpIaYR41EttESOQJg_dxG9oXy8UnmP08tbDE9hdiCzPDncuTL3_A9__XOM&usqp=CAU'/>
+                    <img  src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-HL08fKj91NpIaYR41EttESOQJg_dxG9oXy8UnmP08tbDE9hdiCzPDncuTL3_A9__XOM&usqp=CAU'/>
+                    <img  src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-HL08fKj91NpIaYR41EttESOQJg_dxG9oXy8UnmP08tbDE9hdiCzPDncuTL3_A9__XOM&usqp=CAU'/>
+                    <img  src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-HL08fKj91NpIaYR41EttESOQJg_dxG9oXy8UnmP08tbDE9hdiCzPDncuTL3_A9__XOM&usqp=CAU'/>
+                    <img  src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-HL08fKj91NpIaYR41EttESOQJg_dxG9oXy8UnmP08tbDE9hdiCzPDncuTL3_A9__XOM&usqp=CAU'/>
+                    <img  src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-HL08fKj91NpIaYR41EttESOQJg_dxG9oXy8UnmP08tbDE9hdiCzPDncuTL3_A9__XOM&usqp=CAU'/>
+                    <img  src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-HL08fKj91NpIaYR41EttESOQJg_dxG9oXy8UnmP08tbDE9hdiCzPDncuTL3_A9__XOM&usqp=CAU'/>
+                    <img  src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-HL08fKj91NpIaYR41EttESOQJg_dxG9oXy8UnmP08tbDE9hdiCzPDncuTL3_A9__XOM&usqp=CAU'/>
+                    <img  src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-HL08fKj91NpIaYR41EttESOQJg_dxG9oXy8UnmP08tbDE9hdiCzPDncuTL3_A9__XOM&usqp=CAU'/>
+                    <img  src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-HL08fKj91NpIaYR41EttESOQJg_dxG9oXy8UnmP08tbDE9hdiCzPDncuTL3_A9__XOM&usqp=CAU'/>
+                    <img  src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-HL08fKj91NpIaYR41EttESOQJg_dxG9oXy8UnmP08tbDE9hdiCzPDncuTL3_A9__XOM&usqp=CAU'/>
+                    <img  src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-HL08fKj91NpIaYR41EttESOQJg_dxG9oXy8UnmP08tbDE9hdiCzPDncuTL3_A9__XOM&usqp=CAU'/>
+                    <img  src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-HL08fKj91NpIaYR41EttESOQJg_dxG9oXy8UnmP08tbDE9hdiCzPDncuTL3_A9__XOM&usqp=CAU'/>
+                    <img  src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-HL08fKj91NpIaYR41EttESOQJg_dxG9oXy8UnmP08tbDE9hdiCzPDncuTL3_A9__XOM&usqp=CAU'/>
+                    <img  src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-HL08fKj91NpIaYR41EttESOQJg_dxG9oXy8UnmP08tbDE9hdiCzPDncuTL3_A9__XOM&usqp=CAU'/>
+                    <img  src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-HL08fKj91NpIaYR41EttESOQJg_dxG9oXy8UnmP08tbDE9hdiCzPDncuTL3_A9__XOM&usqp=CAU'/>
+                    <img  src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-HL08fKj91NpIaYR41EttESOQJg_dxG9oXy8UnmP08tbDE9hdiCzPDncuTL3_A9__XOM&usqp=CAU'/>         
+                  </div>
+                </div>
             </div>
           </div>
         </div>

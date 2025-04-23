@@ -19,14 +19,15 @@ function Navigation() {
     setActiveMenu(!activeMenu)
   }
 
-  const panelWidth = isMobile? activeMenu? '100vw':'0vw': activeMenu? '50vw':'0vw';
+  
   const navPos = activeMenu? "0%":"100%";
-  const navCover = activeMenu? "block":"none";
+  const panelWidth = isMobile? activeMenu? '100vw':'0vw': activeMenu? '100vw':'0vw';
+ 
+
 
   useEffect(() => {
     window.addEventListener('scroll', () => {
       setPosYPercent((window.scrollY/window.innerHeight)*10)
-      console.log(posYPercent)
     })
   })
   
@@ -37,9 +38,9 @@ function Navigation() {
             <button className='w-[75%] h-[75%] bg-amber-200  z-2' onClick={openMenu}><h4 className='mix-blend-difference relative text-white z-3'>Burger</h4></button>
         </div>
         <div className='w-full h-2/12  border-y-5 border-black box-border'>
-        <div className='h-[100%] bg-green-700' style={{width: `${posYPercent}%`}}></div>
+        <div className='h-[100%] bg-green-700 border-r-5 border-black duration-500' style={{width: `${posYPercent}%`}}></div>
         </div>
-       <div className=" h-[100vh] fixed right-0 z-1 duration-300 ease-in-out" style={{ width: panelWidth }}>
+       <div className=" h-[88vh] w-full fixed bottom-0 right-0 z-1 duration-300 ease-in-out" style={{ width: panelWidth }}>
           <nav className='w-full h-[25%] flex justify-center items-center border-1 border-black bg-green-200 transition-all ease-in-out duration-400 delay-100' style={{marginLeft: `${navPos}`}}>
               <button className='w-[50%] h-[50%]'>NAVIGATION BUTTON</button>
           </nav>
@@ -53,7 +54,7 @@ function Navigation() {
               <button className='w-[50%] h-[50%]'>NAVIGATION BUTTON</button>
           </nav>
        </div>
-       <div className='w-screen h-screen absolute bg-black opacity-80' onClick={openMenu} style={{display: `${navCover}`}}></div>
+      
     </section>
   </>
 }

@@ -9,6 +9,7 @@ import Services from "./components/Services"
 import Workflow from "./components/Workflow"
 import Skills from "./components/Skills"
 import CTA from "./components/CTA"
+import CodeTesting from "./components/CodeTesting"
 
 
 
