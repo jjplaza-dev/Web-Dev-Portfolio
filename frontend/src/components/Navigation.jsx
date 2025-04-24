@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react'
 function Navigation() {
   const [activeMenu, setActiveMenu] = useState(false)
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 1023);
-  const [posYPercent, setPosYPercent] = useState()
+  const [posYPercent, setPosYPercent] = useState(0)
 
   useEffect(() => {
     const handleResize = () => {
