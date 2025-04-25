@@ -22,6 +22,7 @@
     white-space: nowrap;
     position: absolute;
     bottom: 0;
+   
   }
 
   .logos2 {
@@ -41,11 +42,13 @@
   }
   
   .logosSlide{
+    width: 105%;
     display: flex;
     animation: 30s slide infinite linear;
   }
 
   .logosSlide2 {
+    width: 105%;
     display: flex;
     animation: 35s slide infinite linear reverse;
   }

@@ -33,7 +33,7 @@ function Navigation() {
   
 
   return <>
-    <section className='w-full h-[12vh] fixed flex flex-col top-0 z-1 bg-amber-50'>
+    <section className='w-full h-[12vh] fixed flex flex-col top-0 z-2 bg-amber-800'>
         <div className='h-10/12 aspect-square self-end flex justify-center items-center'>
             <button className='w-[75%] h-[75%] bg-amber-200  z-2' onClick={openMenu}><h4 className='mix-blend-difference relative text-white z-3'>Burger</h4></button>
         </div>
