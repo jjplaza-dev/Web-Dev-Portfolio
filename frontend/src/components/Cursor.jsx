@@ -3,6 +3,7 @@ import React, { useState, useEffect, useRef, use } from 'react';
 function Cursor() {
     const [position, setPosition] = useState({ x: 0, y: 0 });
     const [curSize, setCurSize] = useState({ x: 0, y: 0 });
+    const [onAnimation, setOnAnimation] = useState(true)
     const isHoveringButtonRef = useRef(false);
   
     useEffect(() => {
@@ -21,11 +22,12 @@ function Cursor() {
         setPosition({ x: (rect.x + 20)-rect.width*0.05, y: (rect.y + 20)-rect.height*0.05 });
         setCurSize({ x: rect.width*1.1, y: rect.height*1.1 });
         isHoveringButtonRef.current = true;
-        
+        setOnAnimation(false)
       };
   
       const handleMouseLeave = () => {
         isHoveringButtonRef.current = false;
+        setOnAnimation(true)
       };
   
       window.addEventListener('mousemove', handleMouseMove);

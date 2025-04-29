@@ -52,18 +52,19 @@ button {
   }
   
   img {
- 
+
     max-width: 100%;
   }
   
   .flow > * + * {
     margin-top: var(--flow-spacer, 1em);
-  }
+  } 
   
   body {
     font-family: var(--ff-body);
     font-size: var(--fs-400);
     line-height: 1.6;
+    
   }
   
   h1,

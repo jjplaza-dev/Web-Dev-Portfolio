@@ -2,6 +2,10 @@
 
     box-sizing: border-box;
   }
+
+  body {
+    background-color: #973c00;
+  }
   
  .codeTest {
     background: #f2f2f2;
@@ -42,13 +46,13 @@
   }
   
   .logosSlide{
-    width: 105%;
+    width: fit-content;
     display: flex;
     animation: 30s slide infinite linear;
   }
 
   .logosSlide2 {
-    width: 105%;
+    width: fit-content;
     display: flex;
     animation: 35s slide infinite linear reverse;
   }

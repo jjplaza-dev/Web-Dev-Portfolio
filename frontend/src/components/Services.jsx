@@ -57,10 +57,9 @@ function Services() {
         <p className='w-full text-lg p-5'>I craft clean, efficient, and user-friendly websites tailored to your specific needs. My focus is on creating modern, responsive designs that deliver exceptional user experiences. My expertise spans the entire web development lifecycle, from initial concept and design to final deployment and beyond.</p>
         <div className='w-full h-fit bg-amber-50 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 gap-y-15 lg:gap-y-20 p-5 py-20 box-border'>
           {serviceArr.map((service, index) => (
-            <div className='w-full h-fit  hover:bg-amber-100 cursor-pointer transition-all ease-in-out duration-300 border-5 border-black box-border rounded-[50px] rounded-tl-none hover:rounded-[1px] relative' key={index} id='serviceBox'> 
-              <div className='w-15 h-15 absolute bg-amber-50 border-5 rounded-[5px] z-1 bg-cover translate-x-[50%] translate-y-[-50%]' style={{backgroundImage: `url(${service.image})`}}></div>
-              <div className={`w-full h-full transition-all duration-500  `} style={{transform: `translateY(${onScreen? 0:100}%)`}}>
-                
+            <div className='w-full h-fit  hover:bg-amber-100 active:bg-amber-100 cursor-pointer transition-all ease-in-out duration-300 border-5 border-black box-border rounded-[50px] rounded-tl-none hover:rounded-[1px] active:rounded-[1px] relative hover:translate-x-[-2px] hover:translate-y-[-2px]' key={index} id='serviceBox' style={{boxShadow: onScreen? "10px 10px": "0px 0px"}}> 
+              <button className='w-15 h-15 absolute bg-amber-50 border-5 rounded-[5px] z-1 bg-cover translate-x-[50%] translate-y-[-50%]' style={{backgroundImage: `url(${service.image})`}}></button>
+              <div className={`w-full h-full transition-all duration-500  `} >
                 <div className='p-10'>
                   <b className='text-2xl'>{service.title}</b>
                   <button className='mt-5 text-start indent-7'>{service.text}</button>

@@ -37,7 +37,7 @@ function Navigation() {
         <div className='h-10/12 aspect-square self-end flex justify-center items-center'>
             <button className='w-[75%] h-[75%] bg-amber-200  z-2' onClick={openMenu}><h4 className='mix-blend-difference relative text-white z-3'>Burger</h4></button>
         </div>
-        <div className='w-full h-2/12  border-y-5 border-black box-border'>
+        <div className='w-full h-2/12  border-y-4 border-black box-border'>
         <div className='h-[100%] bg-green-700 border-r-5 border-black duration-500' style={{width: `${posYPercent}%`}}></div>
         </div>
        <div className=" h-[88vh] w-full fixed bottom-0 right-0 z-1 duration-300 ease-in-out" style={{ width: panelWidth }}>
