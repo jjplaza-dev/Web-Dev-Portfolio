@@ -19,7 +19,7 @@ function App() {
     <section className="relative">
       <Ruler />
       <Loadscreen />
-      <Cursor />
+      {/* <Cursor /> */}
       <Navigation />
       <Front/>
       <Works />

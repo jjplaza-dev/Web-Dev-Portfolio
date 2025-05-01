@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react'
 function Navigation() {
   const [activeMenu, setActiveMenu] = useState(false)
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 1023);
-  const [posYPercent, setPosYPercent] = useState(0)
+  const [isMenuHovered, setIsMenuHovered] = useState()
 
   useEffect(() => {
     const handleResize = () => {
@@ -19,7 +19,14 @@ function Navigation() {
     setActiveMenu(!activeMenu)
   }
 
-  
+  const menuHovered = () => {
+    setIsMenuHovered(true)
+  }
+  const menuNotHovered = () => {
+    setIsMenuHovered(false)
+  }
+
+
   const navPos = activeMenu? "0%":"100%";
   const panelWidth = isMobile? activeMenu? '100vw':'0vw': activeMenu? '100vw':'0vw';
  
@@ -27,33 +34,35 @@ function Navigation() {
 
   useEffect(() => {
     window.addEventListener('scroll', () => {
-      setPosYPercent((window.scrollY/window.innerHeight)*10)
     })
   })
   
 
   return <>
-    <section className='w-full h-[12vh] fixed flex flex-col top-0 z-2 bg-amber-800'>
-        <div className='h-10/12 aspect-square self-end flex justify-center items-center'>
-            <button className='w-[75%] h-[75%] bg-amber-200  z-2' onClick={openMenu}><h4 className='mix-blend-difference relative text-white z-3'>Burger</h4></button>
+    <section className='w-full h-[10vh] fixed flex flex-col top-[6vh] z-2'>
+        <div className='h-fit w-fit absolute right-10 items-end'>
+            <button className='w-fit h-fit z-2 flex self-end flex-col items-end absolute right-0' onClick={openMenu} onMouseEnter={menuHovered} onMouseLeave={menuNotHovered}>
+              
+              <button className={`                              ${activeMenu?  "w-10 h-10 delay-200":"w-0 delay-0"} duration-100 h-1 my-[1px] rounded-4xl bg-black`}>
+                <p className={`${activeMenu? "text-[80%]":"text-[0px]"} text-white font-semibold ${activeMenu? "delay-300":"delay-0"} `}>X</p>
+              </button>
+              <button className={`${isMenuHovered? "w-6":"w-3"} ${activeMenu? "w-30 m-2 h-10 delay-150":"w-2 delay-0"} duration-100 h-1 my-[1px] rounded-4xl bg-black`}>
+                <p className={`${activeMenu? "text-[80%]":"text-[0px]"} text-white hover:text-yellow-300 ${activeMenu? "delay-250":"delay-0"}`}>Home</p>
+              </button>
+              <button className={`${isMenuHovered? "w-6":"w-4"} ${activeMenu? "w-30 m-4 h-10 delay-100":"w-2 delay-50"} duration-100 h-1 my-[1px] rounded-4xl bg-black`}>
+                <p className={`${activeMenu? "text-[80%]":"text-[0px]"} text-white hover:text-yellow-300 ${activeMenu? "delay-200":"delay-50"}`}>Works</p>
+              </button>
+              <button className={`${isMenuHovered? "w-6":"w-5"} ${activeMenu? "w-30 m-4 h-10 delay-50":"w-2 delay-100"} duration-100 h-1 my-[1px] rounded-4xl bg-black`}>
+                <p className={`${activeMenu? "text-[80%]":"text-[0px]"} text-white hover:text-yellow-300 ${activeMenu? "delay-150":"delay-100"}`}>About</p>
+              </button>
+              <button className={`${isMenuHovered? "w-6":"w-3"} ${activeMenu? "w-30 m-2 h-10 delay-0":"w-2 delay-150"} duration-100 h-1 my-[1px] rounded-4xl bg-black`}>
+                <p className={`${activeMenu? "text-[80%]":"text-[0px]"} text-white hover:text-yellow-300 ${activeMenu? "delay-100":"delay-150"}`}>Contact</p>
+              </button>
+            </button>
+            
         </div>
-        <div className='w-full h-2/12  border-y-4 border-black box-border'>
-        <div className='h-[100%] bg-green-700 border-r-5 border-black duration-500' style={{width: `${posYPercent}%`}}></div>
-        </div>
-       <div className=" h-[88vh] w-full fixed bottom-0 right-0 z-1 duration-300 ease-in-out" style={{ width: panelWidth }}>
-          <nav className='w-full h-[25%] flex justify-center items-center border-1 border-black bg-green-200 transition-all ease-in-out duration-400 delay-100' style={{marginLeft: `${navPos}`}}>
-              <button className='w-[50%] h-[50%]'>NAVIGATION BUTTON</button>
-          </nav>
-          <nav className='w-full h-[25%] flex justify-center items-center border-1 border-black bg-green-200 transition-all ease-in-out duration-400 delay-200' style={{marginLeft: `${navPos}`}}>
-              <button className='w-[50%] h-[50%]'>NAVIGATION BUTTON</button>
-          </nav>
-          <nav className='w-full h-[25%] flex justify-center items-center border-1 border-black bg-green-200 transition-all ease-in-out duration-400 delay-300' style={{marginLeft: `${navPos}`}}>
-              <button className='w-[50%] h-[50%]'>NAVIGATION BUTTON</button>
-          </nav>
-          <nav className='w-full h-[25%] flex justify-center items-center border-1 border-black bg-green-200 transition-all ease-in-out duration-400 delay-400' style={{marginLeft: `${navPos}`}}>
-              <button className='w-[50%] h-[50%]'>NAVIGATION BUTTON</button>
-          </nav>
-       </div>
+
+       
       
     </section>
   </>
