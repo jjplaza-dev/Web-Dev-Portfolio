@@ -52,8 +52,27 @@ function Services() {
 
   return (
     <>
-      <section className='w-full h-fit bg-red-200' id='servicesBox'>
-        <h2 className='text-3xl font-bold p-5'>[ My Services ]</h2>
+      <section className='w-full h-[400vh] lg:h-[400vh] relative ' id='servicesBox'>
+            <div className='w-full h-full rounded-t-[50px] lg:rounded-t-[100px] mt-20 bg-[#1b1b1b] relative lg:flex'>
+              
+              <div className='w-full lg:w-[50%] h-[15%] lg:h-[15%] relative lg:sticky lg:top-30 text-white'>
+                <h2 className='mb-10 lg:mb:10 p-10 lg:p-15'>What I Offer</h2>
+                <h3 className='absolute bottom-10 p-10 lg:p-15'>I craft clean, efficient, and user-friendly websites tailored to your specific needs. My focus is on creating modern, responsive designs that deliver exceptional user experiences. My expertise spans the entire web development lifecycle, from initial concept and design to final deployment and beyond.</h3>
+              </div>
+              
+              <div className='w-full lg:w-[50%] h-[85%] lg:h-full flex flex-col justify-around'>  
+                {serviceArr.map((service, index) => (
+                    <div key={index} className='w-full h-1/6  sticky top-30 '>
+                      <div className='w-11/12 lg:w-10/12 h-9/12 lg:h-6/12 cursor-pointer bg-amber-300 absolute bottom-[50%] right-[50%] translate-x-[50%] translate-y-[50%] p-15 lg:p-10 text-[1.2rem] rounded-tl-none rounded-[50px] content-end' style={{boxShadow: "10px 10px white"}}>{service.text}</div> 
+                    </div>
+                  ))}
+              </div>
+            </div>
+            
+
+  
+
+        {/* <h2 className='text-3xl font-bold p-5'>[ My Services ]</h2>
         <p className='w-full text-lg p-5'>I craft clean, efficient, and user-friendly websites tailored to your specific needs. My focus is on creating modern, responsive designs that deliver exceptional user experiences. My expertise spans the entire web development lifecycle, from initial concept and design to final deployment and beyond.</p>
         <div className='w-full h-fit bg-amber-50 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 gap-y-15 lg:gap-y-20 p-5 py-20 box-border'>
           {serviceArr.map((service, index) => (
@@ -68,7 +87,7 @@ function Services() {
               </div>
             </div>
           ))}
-        </div>
+        </div> */}
       </section>
     </>
   );

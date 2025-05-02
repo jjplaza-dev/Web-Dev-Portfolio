@@ -21,7 +21,7 @@ function Front() {
 
   return <>
     <section className='w-screen h-screen relative '>
-      <div className='w-full h-[88vh] bg-amber-800 absolute top-[12vh]' id='frontBox'>
+      <div className='w-full h-[100vh] bg-[#1b1b1b] absolute ' id='frontBox'>
         <div className='w-[60vw] sm:w-[40vw] md:w-[30vw] lg:w-[20vw] absolute bottom-[10%] right-[10%] aspect-[1/1.4] bg-amber-50 m-auto' style={{boxShadow: `${curPos.x/10}px ${curPos.y/10}px`}} id='profileBox'>
         <button className='w-10/12 h-10/12 absolute bottom-[50%] right-[50%] translate-x-[50%] translate-y-[50%] z-1'></button>
         </div>
