@@ -27,12 +27,14 @@ button {
     --fs-xl: clamp(3rem, 12vw + 1rem, 12rem);
     --fs-600: 2rem;
     --fs-400: 1rem;
+    --fxs-300: 0.8rem;
   }
   
   @media (min-width: 40em) {
     :root {
       --fs-600: 3rem;
       --fs-400: 1.5rem;
+      --fxs-300: 1.2rem;
     }
   }
   
@@ -84,6 +86,9 @@ button {
   }
   h3 {
     font-size: var(--fs-400);
+  }
+  h4{
+    font-size: var(--fxs-300);
   }
   .tf2 {
     font-size: var(--fs-600);

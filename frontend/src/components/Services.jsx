@@ -62,8 +62,14 @@ function Services() {
               
               <div className='w-full lg:w-[50%] h-[85%] lg:h-full flex flex-col justify-around'>  
                 {serviceArr.map((service, index) => (
-                    <div key={index} className='w-full h-1/6  sticky top-30 '>
-                      <div className='w-11/12 lg:w-10/12 h-9/12 lg:h-6/12 cursor-pointer bg-amber-300 absolute bottom-[50%] right-[50%] translate-x-[50%] translate-y-[50%] p-15 lg:p-10 text-[1.2rem] rounded-tl-none rounded-[50px] content-end' style={{boxShadow: "10px 10px white"}}>{service.text}</div> 
+                    <div key={index} className='w-full h-1/6  sticky top-30 pt-15'>
+                      <div className='w-11/12 lg:w-10/12 h-8/12 lg:h-8/12 cursor-pointer border-4 bg-[#202020] text-white absolute  right-[50%] translate-x-[50%] hover:translate-x-[49%] hover:translate-y-[-1%] duration-200 text-[1.2rem] rounded-tl-none rounded-[50px]' style={{boxShadow: "10px 10px gray"}}>
+                        <div className='w-20 h-20 absolute z-2 bg-cover border-2 rounded-2xl translate-x-[50%] translate-y-[-50%] bg-gray-200' style={{backgroundImage: `url(${service.image})`}}></div>
+                        <h3 className='w-full h-fit absolute bottom-0 px-8 py-5 lg:px-15 lg:py-10 '>
+                          <h3 className='w-full py-5 font-semibold'>{service.title}</h3>
+                          {service.text}
+                        </h3>
+                      </div> 
                     </div>
                   ))}
               </div>
