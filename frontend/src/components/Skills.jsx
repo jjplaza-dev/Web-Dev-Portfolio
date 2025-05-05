@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import styles from "./Skills.module.css"
+import Workflow from './Workflow'
 
 function Skills() {
     const [scrollY, setScrollY] = useState()
@@ -78,8 +79,8 @@ function Skills() {
   return <>
     <section className='w-full h-[400vh] bg-purple-100 ' id='skillsBox'>
         <div className='w-full h-[100vh] sticky top-[0] '>
-          <div className='w-full h-full bg-red-500 absolute grid grid-cols-3 items-center'> 
-            ASDSDSADS
+          <div className='w-full h-full bg-red-500 absolute items-center'> 
+            <Workflow />
           </div>
           <div className='w-full h-full '>
             <div className='w-[200%] h-[60%] bg-red-800 transition-all ease-out duration-100 delay-10 border-1 translate-x-[-5%] translate-y-[-10%] rotate-4 border-black cursor-pointer' style={{transform: `translateY(${scrollY*200}%)`}}>

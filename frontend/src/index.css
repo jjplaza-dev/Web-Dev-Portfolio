@@ -121,6 +121,7 @@ button {
   
   article {
     display: grid;
+  
   }
   
   article > *:not(img) {

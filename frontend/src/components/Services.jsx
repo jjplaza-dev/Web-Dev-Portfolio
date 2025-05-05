@@ -55,7 +55,7 @@ function Services() {
       <section className='w-full h-[400vh] lg:h-[400vh] relative ' id='servicesBox'>
             <div className='w-full h-full rounded-t-[50px] lg:rounded-t-[100px] mt-20 bg-[#1b1b1b] relative lg:flex'>
               
-              <div className='w-full lg:w-[50%] h-[15%] lg:h-[15%] relative lg:sticky lg:top-30 text-white'>
+              <div className='w-full lg:w-[50%] h-[12%] lg:h-[20%] relative lg:sticky lg:top-30 text-white'>
                 <h2 className='mb-10 lg:mb:10 p-10 lg:p-15'>What I Offer</h2>
                 <h3 className='absolute bottom-10 p-10 lg:p-15'>I craft clean, efficient, and user-friendly websites tailored to your specific needs. My focus is on creating modern, responsive designs that deliver exceptional user experiences. My expertise spans the entire web development lifecycle, from initial concept and design to final deployment and beyond.</h3>
               </div>
