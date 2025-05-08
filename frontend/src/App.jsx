@@ -24,7 +24,6 @@ function App() {
       <Front/>
       <Works />
       <Services/>
-      <Workflow />
       <CTA />
       <Skills />
       <Footer />

@@ -39,7 +39,11 @@ These sets of workflows provide a structured approach to web development. Rememb
   return (
     <>
       <section className='w-full h-full bg-amber-50 flex'>
-        <div className='w-full h-[60%] bg-amber-400 m-auto'></div>
+        <div className='w-full h-[60%] bg-amber-400 m-auto grid grid-cols-1 lg:grid-cols-3 justify-center align-middle'>
+          <div className="w-[10rem] lg:w-[15rem] aspect-[1/1.5] bg-green-200"></div>
+          <div className="w-[10rem] lg:w-[15rem] aspect-[1/1.5] bg-green-200"></div>
+          <div className="w-[10rem] lg:w-[15rem] aspect-[1/1.5] bg-green-200"></div>
+        </div>
       </section>
     </>
   );
