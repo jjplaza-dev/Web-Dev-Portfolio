@@ -39,10 +39,10 @@ These sets of workflows provide a structured approach to web development. Rememb
   return (
     <>
       <section className='w-full h-full bg-amber-50 flex'>
-        <div className='w-full h-[60%] bg-amber-400 m-auto grid grid-cols-1 lg:grid-cols-3 justify-center align-middle'>
-          <div className="w-[10rem] lg:w-[15rem] aspect-[1/1.5] bg-green-200"></div>
-          <div className="w-[10rem] lg:w-[15rem] aspect-[1/1.5] bg-green-200"></div>
-          <div className="w-[10rem] lg:w-[15rem] aspect-[1/1.5] bg-green-200"></div>
+        <div className='w-full h-[100%] lg:h-[60%] bg-amber-400 m-auto grid grid-cols-1 lg:grid-cols-3 relative'>
+          <div className="w-[60vw] lg:w-[50%] lg:min-w-[20rem] lg:max-w-[20rem] h-[80%] px-5 py-2 lg:aspect-[1/1.5] bg-green-200 m-auto text-center"><h4 className='h-[20%] mb-8'>Planning and Design</h4><p>Define goals, audience, structure, and tools; create wireframes to guide layout, functionality, and user experience.</p></div>
+          <div className="w-[60vw] lg:w-[50%] lg:min-w-[20rem] lg:max-w-[20rem] h-[80%] px-5 py-2 lg:aspect-[1/1.5] bg-green-200 m-auto text-center"><h4 className='h-[20%] mb-8'>Development</h4><p>Build front and back end using appropriate technologies, ensuring responsiveness, interactivity, and cross-device compatibility.</p></div>
+          <div className="w-[60vw] lg:w-[50%] lg:min-w-[20rem] lg:max-w-[20rem] h-[80%] px-5 py-2 lg:aspect-[1/1.5] bg-green-200 m-auto text-center"><h4 className='h-[20%] mb-8'>Testing and Deployment</h4><p>Test thoroughly for bugs and performance issues, optimize, then deploy to a hosting platform and monitor post-launch.</p></div>
         </div>
       </section>
     </>
