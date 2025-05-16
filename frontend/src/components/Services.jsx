@@ -52,48 +52,19 @@ function Services() {
 
   return (
     <>
-      <section className='w-full h-[400vh] lg:h-[400vh] relative ' id='servicesBox'>
-            <div className='w-full h-full rounded-t-[50px] lg:rounded-t-[100px] mt-20 bg-[#1b1b1b] relative lg:flex'>
-              
-              <div className='w-full lg:w-[50%] h-[12%] lg:h-[20%] relative lg:sticky lg:top-30 text-white'>
-                <h2 className='mb-10 lg:mb:10 p-10 lg:p-15'>What I Offer</h2>
-                <h5 className='absolute bottom-10 p-10 lg:p-15'>I craft clean, efficient, and user-friendly websites tailored to your specific needs. My focus is on creating modern, responsive designs that deliver exceptional user experiences. My expertise spans the entire web development lifecycle, from initial concept and design to final deployment and beyond.</h5>
-              </div>
-              
-              <div className='w-full lg:w-[50%] h-[85%] lg:h-full flex flex-col justify-around'>  
-                {serviceArr.map((service, index) => (
-                    <div key={index} className='w-full h-1/6  sticky top-30 pt-15'>
-                      <div className='w-11/12 lg:w-10/12 h-8/12 lg:h-8/12 cursor-pointer border-4 bg-[#202020] text-white absolute  right-[50%] translate-x-[50%] hover:translate-x-[49%] hover:translate-y-[-1%] duration-200 text-[1.2rem] rounded-tl-none rounded-[50px]' style={{boxShadow: "10px 10px gray"}}>
-                        <div className='w-20 h-20 absolute z-2 bg-cover border-2 rounded-2xl translate-x-[50%] translate-y-[-50%] bg-gray-200' style={{backgroundImage: `url(${service.image})`}}></div>
-                        <h5 className='w-full h-fit absolute bottom-0 px-8 py-5 lg:px-15 lg:py-10 '>
-                          <h5 className='w-full py-5 font-semibold'>{service.title}</h5>
-                          {service.text}
-                        </h5>
-                      </div> 
-                    </div>
-                  ))}
-              </div>
+      <section className='w-full h-fit ] bg-amber-300 relative ' id='servicesBox'>
+          <div className='w-full h-[75vh] bg-amber-200'>
+            <div className='w-[90%] md:w-[75%] lg:w-[50%] h-fit bg-amber-500 m-auto sticky top-[16vh] py-10 px-5 flex flex-col justify-around'>
+              <h2 className='w-full text-center font-semibold scale-120'>My Services</h2>
+              <h5 className='text-center mt-10'>I craft clean, efficient, and user-friendly websites tailored to your specific needs. My focus is on creating modern, responsive designs that deliver exceptional user experiences.
+</h5>
             </div>
-            
-
-  
-
-        {/* <h2 className='text-3xl font-bold p-5'>[ My Services ]</h2>
-        <p className='w-full text-lg p-5'>I craft clean, efficient, and user-friendly websites tailored to your specific needs. My focus is on creating modern, responsive designs that deliver exceptional user experiences. My expertise spans the entire web development lifecycle, from initial concept and design to final deployment and beyond.</p>
-        <div className='w-full h-fit bg-amber-50 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 gap-y-15 lg:gap-y-20 p-5 py-20 box-border'>
-          {serviceArr.map((service, index) => (
-            <div className='w-full h-fit  hover:bg-amber-100 active:bg-amber-100 cursor-pointer transition-all ease-in-out duration-300 border-5 border-black box-border rounded-[50px] rounded-tl-none hover:rounded-[1px] active:rounded-[1px] relative hover:translate-x-[-2px] hover:translate-y-[-2px]' key={index} id='serviceBox' style={{boxShadow: onScreen? "10px 10px": "0px 0px"}}> 
-              <button className='w-15 h-15 absolute bg-amber-50 border-5 rounded-[5px] z-1 bg-cover translate-x-[50%] translate-y-[-50%]' style={{backgroundImage: `url(${service.image})`}}></button>
-              <div className={`w-full h-full transition-all duration-500  `} >
-                <div className='p-10'>
-                  <b className='text-2xl'>{service.title}</b>
-                  <button className='mt-5 text-start indent-7'>{service.text}</button>
-                </div>
-                
-              </div>
-            </div>
-          ))}
-        </div> */}
+          </div>
+          <div className='w-full h-fit md:grid md:grid-cols-2 lg:grid-cols-3'>
+            {serviceArr.map((service, index) => (
+              <div className='w-full h-[50vh] border-2' key={index}></div>
+            ))}
+          </div>
       </section>
     </>
   );
