@@ -18,11 +18,14 @@ function Navigation() {
   }, []);
 
   window.addEventListener('scroll',() => {
-    if(scrollY >= window.innerHeight/1.5) {
+    if(scrollY >= window.innerHeight/1.5 && scrollY < window.innerHeight) {
       document.getElementById("navLogo").style.opacity = "0"
     } else {
        document.getElementById("navLogo").style.opacity = "1"
     }
+
+    console.log(screenY)
+    
   })
 
   const openMenu = () => {

@@ -19,10 +19,9 @@ function Footer() {
 
   return (
     <>
-      <section className='w-screen h-[120vh] bg-green-100 absolute bottom-0 z-1 transition-all ease-out duration-300 delay-0' style={{clipPath: `ellipse(${onBottom? "100% 100% at bottom center" : "80% 80% at bottom center"})`}} id='footerBox'>
-        <div className='w-[100%] h-[80%] bg-green-200 absolute bottom-0 transition-all ease-in-out duration-300 delay-0 content-end' style={{clipPath: `ellipse(${onBottom? "80% 80%" : "60% 60%"} at bottom center)`}}>
-            HAVE SOMETHING IN MIND? LET'S BRING IT TO LIFE. 
-        </div>
+      <section className='w-screen h-[100vh] relative bg-[#1b1b1b] bottom-0 z-1 transition-all ease-out duration-300 delay-0' id='footerBox'>
+        <div className='w-[100%] h-[100vh] absolute bg-white z-2' style={{clipPath: `polygon(80% 100%, 50% 30%, 40% 20%, 0% 20%, 0% 100%)`}}></div>
+        <div className='w-[100%] h-[100vh] absolute bg-white z-2' style={{clipPath: `polygon(100% 100%, 100% 20%, 60% 20%, 50% 30%, 20% 100%)`}}></div>
       </section>
     </>
   );

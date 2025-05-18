@@ -77,7 +77,7 @@ function Skills() {
 
 
   return <>
-    <section className='w-full h-[400vh] bg-purple-100 ' id='skillsBox'>
+    <section className='w-full h-[400vh] bg-[purple-100] ' id='skillsBox'>
         <div className='w-full h-[100vh] sticky top-[0] '>
           <div className='w-full h-full bg-red-500 absolute items-center'> 
             <Workflow />
