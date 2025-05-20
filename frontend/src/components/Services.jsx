@@ -53,15 +53,15 @@ function Services() {
   return (
     <>
       <section className='w-full h-fit bg-[#1b1b1b] relative ' id='servicesBox'>
-          <div className='w-full h-[75vh] bg-amber-200'>
-            <div className='w-[90%] md:w-[75%] lg:w-[50%] h-fit bg-amber-500 m-auto sticky top-[16vh] py-10 px-5 flex flex-col justify-around'>
-              <h2 className='w-full text-center font-semibold scale-120'>My Services</h2>
+          <div className='w-full h-[75vh] '>
+            <div className='w-[90%] md:w-[75%] lg:w-[50%] h-fit m-auto sticky top-[16vh] py-10 px-5 flex flex-col justify-around text-white border-2 border-[#1b1b1b] shadow-white rounded-[5px]'>
+              <h2 className='w-full text-center font-semibold scale-120 '>My Services</h2>
               <h5 className='text-center mt-10'>I craft clean, efficient, and user-friendly websites tailored to your specific needs. My focus is on creating modern, responsive designs that deliver exceptional user experiences.</h5>
             </div>
           </div>
           <div className='w-full h-fit md:grid lg:grid-cols-3'>
             {serviceArr.map((service, index) => (
-              <div className='w-full h-[60vh] border-2 relative' key={index}>
+              <div className='w-full h-[60vh] relative' key={index}>
                 <div className='w-[90%] h-[80%] text-white border-3 border-white absolute right-[50%] translate-x-[48%] top-[10%] pt-20 px-10 lg:pr-20 rounded-[20px] rounded-tl-none shadow-' style={{boxShadow: `${15}px ${15}px white, 2px 2px white, 5px 5px white, 7px 7px white, 10px 10px white, 12px 12px white`}}>
                  <div className='w-20 h-20 border-3 bg-white rounded-[5px] absolute top-0 left-0 bg-cover translate-x-[50%] translate-y-[-50%]'>
                    <div className='w-[80%] h-[80%] bg-cover absolute right-[50%] bottom-[50%] translate-x-[50%] translate-y-[50%]' style={{backgroundImage: `url(${service.image})`}}></div>

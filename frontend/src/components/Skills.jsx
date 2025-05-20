@@ -79,17 +79,17 @@ function Skills() {
   return <>
     <section className='w-full h-[400vh] bg-[purple-100] ' id='skillsBox'>
         <div className='w-full h-[100vh] sticky top-[0] '>
-          <div className='w-full h-full bg-red-500 absolute items-center overflow-hidden'> 
+          <div className='w-full h-full bg-[#1b1b1b] absolute items-center overflow-hidden'> 
             <Workflow />
           </div>
           <div className='w-full h-full '>
-            <div className='w-[200%] h-[60%] bg-red-800 transition-all ease-out duration-100 delay-10 border-1 translate-x-[-5%] translate-y-[-10%] rotate-4 border-black cursor-pointer' style={{transform: `translateY(${scrollY*200}%)`}}>
+            <div className='w-[200%] h-[60%] bg-[#1b1b1b] transition-all ease-out duration-100 delay-10 translate-x-[-5%] translate-y-[-10%] rotate-4 cursor-pointer' style={{transform: `translateY(${scrollY*200}%)`}}>
                <div className={styles.logos}>
                   <div className={styles.logosSlide} id='logos-slide'>
                     {frontendSkills.map((skill, index) => (
-                      <div className='w-[125px] lg:w-[250px] cursor-pointer aspect-[2/2] lg:aspect-[2/1.2] mx-[2px] lg:mx-[5px] rounded-[5px] relative bg-[rgb(159,7,18)]' key={index} style={{filter: "brightness(1.1)"}}>
+                      <div className='w-[125px] lg:w-[250px] cursor-pointer aspect-[2/2] lg:aspect-[2/1.2] mx-[2px] lg:mx-[5px] rounded-[5px] relative bg-white' key={index} style={{filter: "brightness(1.1)"}}>
                         <div className='w-[100%] h-[100%] absolute scale-x-85 scale-y-80 z-1'>
-                          <div className='w-full h-full opacity-0 lg:hover:opacity-100 duration-300 rounded-[5px] text-center' style={{backgroundColor: "rgba(159,7,18, 0.90)"}}>{skill.skill}<br/>{skill.description}</div> 
+                          <div className='w-full h-full opacity-0 lg:hover:opacity-100 duration-300 rounded-[5px] text-center text-white' style={{backgroundColor: "rgba(26,26,26, 0.90)"}}>{skill.skill}<br/>{skill.description}</div> 
                         </div>
                         <img className='h-[50%] aspect-square absolute right-[50%] bottom-[60%] lg:bottom-[50%] translate-x-[50%] translate-y-[50%] opacity-80' src={skill.logo} key={index} alt="html-5--v1"/>
                         <div className='absolute bottom-1 right-[50%] translate-x-[50%] block lg:hidden'>{skill.skill}</div>
@@ -98,13 +98,13 @@ function Skills() {
                   </div>
                 </div>
             </div>
-            <div className='w-[200%] h-[70%] bg-red-800 transition-all ease-out duration-100 delay-10 border-1 translate-x-[-5%] translate-y-[-10%] rotate-4 border-black cursor-pointer' style={{transform: `translateY(${scrollY*-200}%)`}}>
+            <div className='w-[200%] h-[70%] bg-[#1b1b1b] transition-all ease-out duration-100 delay-10 translate-x-[-5%] translate-y-[-10%] rotate-4 cursor-pointer' style={{transform: `translateY(${scrollY*-200}%)`}}>
                 <div className={styles.logos2}>
                   <div className={styles.logosSlide2} id='logos-slide'>
                     {frontendSkills.map((skill, index) => (
-                         <div className='w-[125px] lg:w-[250px] cursor-pointer aspect-[2/2] lg:aspect-[2/1.2] mx-[2px] lg:mx-[5px] rounded-[5px] relative bg-[#9f0712]' key={index} style={{filter: "brightness(1.1)"}}>
+                         <div className='w-[125px] lg:w-[250px] cursor-pointer aspect-[2/2] lg:aspect-[2/1.2] mx-[2px] lg:mx-[5px] rounded-[5px] relative bg-white' key={index} style={{filter: "brightness(1.1)"}}>
                           <div className='w-[100%] h-[100%] absolute scale-x-85 scale-y-80 z-1'>
-                            <div className='w-full h-full opacity-0 lg:hover:opacity-100 duration-300 rounded-[5px] text-center' style={{backgroundColor: "rgba(159,7,18, 0.90)"}}>{skill.skill}<br/>{skill.description}</div> 
+                            <div className='w-full h-full opacity-0 lg:hover:opacity-100 duration-300 rounded-[5px] text-center text-white' style={{backgroundColor: "rgba(26,26,26, 0.90)"}}>{skill.skill}<br/>{skill.description}</div> 
                           </div>
                           <img className='h-[50%] aspect-square absolute right-[50%] bottom-[60%] lg:bottom-[50%] translate-x-[50%] translate-y-[50%] opacity-80' src={skill.logo} key={index} alt="html-5--v1"/>
                           <div className='absolute bottom-1 right-[50%] translate-x-[50%] block lg:hidden'>{skill.skill}</div>
