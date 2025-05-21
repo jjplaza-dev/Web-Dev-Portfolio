@@ -83,7 +83,7 @@ function Skills() {
             <Workflow />
           </div>
           <div className='w-full h-full '>
-            <div className='w-[200%] h-[60%] bg-[#1b1b1b] transition-all ease-out duration-100 delay-10 translate-x-[-5%] translate-y-[-10%] rotate-4 cursor-pointer' style={{transform: `translateY(${scrollY*200}%)`}}>
+            <div className='w-[100%] h-[50%] bg-[#1b1b1b] transition-all ease-out duration-100 delay-10   cursor-pointer' style={{transform: `translateY(${scrollY*200}%)`}}>
                <div className={styles.logos}>
                   <div className={styles.logosSlide} id='logos-slide'>
                     {frontendSkills.map((skill, index) => (
@@ -96,9 +96,14 @@ function Skills() {
                       </div>
                     ))}
                   </div>
+                  <div className='w-screen h-fit absolute bottom-0'>
+                    <div className='h-fit w-fit absolute bottom-0 text-[120px] lg:text-[150px] left-[50%] translate-x-[-50%] translate-y-[50%] text-[#2f2f2f]' style={{textShadow:  `1px 0px 2px #ffffff`
+   }}>SKILLS</div>
+                  </div>
+                  
                 </div>
             </div>
-            <div className='w-[200%] h-[70%] bg-[#1b1b1b] transition-all ease-out duration-100 delay-10 translate-x-[-5%] translate-y-[-10%] rotate-4 cursor-pointer' style={{transform: `translateY(${scrollY*-200}%)`}}>
+            <div className='w-[100%] h-[50%] bg-[#1b1b1b] transition-all ease-out duration-100 delay-10   cursor-pointer' style={{transform: `translateY(${scrollY*-200}%)`}}>
                 <div className={styles.logos2}>
                   <div className={styles.logosSlide2} id='logos-slide'>
                     {frontendSkills.map((skill, index) => (
@@ -111,6 +116,11 @@ function Skills() {
                         </div>
                     ))}
                   </div>
+                  <div className='w-screen h-fit absolute top-0'>
+                    <div className='h-fit w-fit absolute top-0 text-[120px] lg:text-[150px] left-[50%] translate-x-[-50%] translate-y-[-50%] text-[#2f2f2f]' style={{textShadow:  `1px 0px 2px #ffffff`
+   }}>SKILLS</div>
+                  </div>
+                  
                 </div>
             </div>
           </div>

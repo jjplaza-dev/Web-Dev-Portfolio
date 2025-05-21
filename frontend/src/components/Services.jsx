@@ -53,8 +53,8 @@ function Services() {
   return (
     <>
       <section className='w-full h-fit bg-[#1b1b1b] relative ' id='servicesBox'>
-          <div className='w-full h-[75vh] '>
-            <div className='w-[90%] md:w-[75%] lg:w-[50%] h-fit m-auto sticky top-[16vh] py-10 px-5 flex flex-col justify-around text-white border-2 border-[#1b1b1b] shadow-white rounded-[5px]'>
+          <div className='w-full h-[75vh]' style={{background: `linear-gradient(black, #1b1b1b)`}}>
+            <div className='w-[90%] md:w-[75%] lg:w-[50%] h-fit m-auto sticky top-[16vh] py-10 px-5 flex flex-col justify-around text-white  shadow-white rounded-[5px]'>
               <h2 className='w-full text-center font-semibold scale-120 '>My Services</h2>
               <h5 className='text-center mt-10'>I craft clean, efficient, and user-friendly websites tailored to your specific needs. My focus is on creating modern, responsive designs that deliver exceptional user experiences.</h5>
             </div>
