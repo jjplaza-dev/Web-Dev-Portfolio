@@ -35,12 +35,12 @@ function Works() {
  
 
   return (
-    <section className="w-screen h-fit bg-black">
+    <section className="w-screen h-fit bg-white">
       {worksArr.map((work, index) => (
         <div className='w-full h-[60vh] lg:h-[80vh] relative'>
-          <div className='w-full h-10/12 relative border-1 '>
-            <div className='w-full h-[5vh] bg-white sticky top-0 '>
-              <div className='w-full h-full px-2 lg:px-10 py-2 flex justify-between relative text-black'>
+          <div className='w-full h-10/12 relative '>
+            <div className='w-full h-[5vh] bg-black sticky top-0 '>
+              <div className='w-full h-full px-2 lg:px-10 py-2 flex justify-between relative text-white'>
               [{work.number}] {work.title}
               <div className=''>{work.skills}</div>
               </div>

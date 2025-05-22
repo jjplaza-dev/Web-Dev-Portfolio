@@ -52,8 +52,8 @@ function Services() {
 
   return (
     <>
-      <section className='w-full h-fit bg-[#1b1b1b] relative ' id='servicesBox'>
-          <div className='w-full h-[75vh]' style={{background: `linear-gradient(black, #1b1b1b)`}}>
+      <section className='w-full h-[400vh] bg-[#1b1b1b] relative ' id='servicesBox'>
+          {/* <div className='w-full h-[75vh]' style={{background: `linear-gradient(black, #1b1b1b)`}}>
             <div className='w-[90%] md:w-[75%] lg:w-[50%] h-fit m-auto sticky top-[16vh] py-10 px-5 flex flex-col justify-around text-white  shadow-white rounded-[5px]'>
               <h2 className='w-full text-center font-semibold scale-120 '>My Services</h2>
               <h5 className='text-center mt-10'>I craft clean, efficient, and user-friendly websites tailored to your specific needs. My focus is on creating modern, responsive designs that deliver exceptional user experiences.</h5>
@@ -71,6 +71,49 @@ function Services() {
                 </div>
               </div>
             ))}
+          </div> */}
+          <div className='w-full h-full absolute top-0 bg-white'>
+            <div className='w-fit m-auto sticky top-[25vh] text-[80px] text-center lg:text-[150px] font-archivo font-bold scale-y-80 tracking-[-0.08em]'>WHAT I DO 
+              <div className='w-full lg:w-[60vw] text-[20px] tracking-normal'>I craft clean, efficient, and user-friendly websites tailored to your specific needs. My focus is on creating modern, responsive designs that deliver exceptional user experiences.</div>
+            </div>
+          </div>
+          <div className='w-[90vw] lg:w-[70vw] h-[300vh] absolute top-[100vh] left-[50%] translate-x-[-50%]'>
+            <div className='w-full h-1/6  relative box-border'>
+              <div className='h-6/12 lg:h-9/12 aspect-[1/1.2] lg:aspect-[1/1] rounded-[10px] absolute left-[50%] translate-x-[-50%] bg-[#C2C2C233] backdrop-blur-[30px] hover:bg-[#C2C2C2] duration-400 cursor-pointer leading-10'>
+                <h4 className='w-full p-2 lg:p-5 font-extrabold'>{serviceArr[0].title}</h4>
+                <p className='text-[12px] md:text-[13px] lg:text-[20px] p-2 lg:p-5 leading-tight absolute bottom-0'>{serviceArr[0].text}</p>
+              </div>
+            </div>
+            <div className='w-full h-1/6  relative box-border'>
+              <div className='h-6/12 lg:h-9/12 aspect-[1/1.2] lg:aspect-[1/1] rounded-[10px] absolute left-[0%] bg-[#C2C2C233] backdrop-blur-[30px] hover:bg-[#C2C2C2] duration-400 cursor-pointer leading-10'>
+                <h4 className='w-full p-2 lg:p-5 font-extrabold'>{serviceArr[1].title}</h4>
+                <p className='text-[12px] md:text-[13px] lg:text-[20px] p-2 lg:p-5 leading-tight absolute bottom-0'>{serviceArr[1].text}</p>
+              </div>
+            </div>
+            <div className='w-full h-1/6  relative box-border'>
+              <div className='h-6/12 lg:h-9/12 aspect-[1/1.2] lg:aspect-[1/1] rounded-[10px] absolute right-[0%] bg-[#C2C2C233] backdrop-blur-[30px] hover:bg-[#C2C2C2] duration-400 cursor-pointer leading-10'>
+                <h4 className='w-full p-2 lg:p-5 font-extrabold'>{serviceArr[2].title}</h4>
+                <p className='text-[12px] md:text-[13px] lg:text-[20px] p-2 lg:p-5 leading-tight absolute bottom-0'>{serviceArr[2].text}</p>
+              </div>
+            </div>
+            <div className='w-full h-1/6  relative box-border'>
+              <div className='h-6/12 lg:h-9/12 aspect-[1/1.2] lg:aspect-[1/1] rounded-[10px] absolute left-[50%] translate-x-[-50%] bg-[#C2C2C233] backdrop-blur-[30px] hover:bg-[#C2C2C2] duration-400 cursor-pointer leading-10'>
+                <h4 className='w-full p-2 lg:p-5 font-extrabold'>{serviceArr[3].title}</h4>
+                <p className='text-[12px] md:text-[13px] lg:text-[20px] p-2 lg:p-5 leading-tight absolute bottom-0'>{serviceArr[3].text}</p>
+              </div>
+            </div>
+            <div className='w-full h-1/6  relative box-border'>
+              <div className='h-6/12 lg:h-9/12 aspect-[1/1.2] lg:aspect-[1/1] rounded-[10px] absolute left-[0%] bg-[#C2C2C233] backdrop-blur-[30px] hover:bg-[#C2C2C2] duration-400 cursor-pointer leading-10'>
+                <h4 className='w-full p-2 lg:p-5 font-extrabold'>{serviceArr[4].title}</h4>
+                <p className='text-[12px] md:text-[13px] lg:text-[20px] p-2 lg:p-5 leading-tight absolute bottom-0'>{serviceArr[4].text}</p>
+              </div>
+            </div>
+            <div className='w-full h-1/6  relative box-border'>
+              <div className='h-6/12 lg:h-9/12 aspect-[1/1.2] lg:aspect-[1/1] rounded-[10px] absolute right-[0%] bg-[#C2C2C233] backdrop-blur-[30px] hover:bg-[#C2C2C2] duration-400 cursor-pointer leading-10'>
+                <h4 className='w-full p-2 lg:p-5 font-extrabold'>{serviceArr[5].title}</h4>
+                <p className='text-[12px] md:text-[13px] lg:text-[20px] p-2 lg:p-5 leading-tight absolute bottom-0'>{serviceArr[5].text}</p>
+              </div>
+            </div>
           </div>
       </section>
     </>

@@ -38,7 +38,7 @@ These sets of workflows provide a structured approach to web development. Rememb
   
   return (
     <>
-      <section className='w-full h-full bg-[#1b1b1b] flex'>
+      <section className='w-full h-full bg-[#2f2f2f] flex'>
         <div className='w-full h-[100%] lg:h-[60%] m-auto grid grid-cols-1 lg:grid-cols-3 relative'>
           <div className="w-[60vw] lg:w-[50%] lg:min-w-[20rem] lg:max-w-[20rem] h-[80%] px-5 py-2 lg:aspect-[1/1.5] rounded-[5px] text-black bg-white m-auto text-center">
             <h4 className='h-[20%] mb-8'>Insight and Interface</h4><p>Define goals, audience, structure, and tools; create wireframes to guide layout, functionality, and user experience.</p>
