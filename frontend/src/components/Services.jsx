@@ -79,7 +79,7 @@ function Services() {
           </div>
           <div className='w-[90vw] lg:w-[70vw] h-[300vh] absolute top-[100vh] left-[50%] translate-x-[-50%]'>
             <div className='w-full h-1/6  relative box-border'>
-              <div className='h-6/12 lg:h-9/12 aspect-[1/1.2] lg:aspect-[1/1] rounded-[10px] absolute left-[50%] translate-x-[-50%] bg-[#C2C2C233] backdrop-blur-[30px] hover:bg-[#C2C2C2] duration-400 cursor-pointer leading-10'>
+              <div className='h-6/12 lg:h-9/12 aspect-[1/1.2] lg:aspect-[1/1] rounded-[10px] absolute left-[50%] translate-x-[-50%] bg-[#C2C2C233] backdrop-blur-[30px] hover:bg-[#C2C2C2] duration-400 cursor-pointer leading-10 rotate-y-0'>
                 <h4 className='w-full p-2 lg:p-5 font-extrabold'>{serviceArr[0].title}</h4>
                 <p className='text-[12px] md:text-[13px] lg:text-[20px] p-2 lg:p-5 leading-tight absolute bottom-0'>{serviceArr[0].text}</p>
               </div>

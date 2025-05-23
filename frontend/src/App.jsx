@@ -13,6 +13,7 @@ import CodeTesting from "./components/CodeTesting"
 
 
 
+
 function App() {
 
   return <> 
@@ -22,10 +23,10 @@ function App() {
       {/* <Cursor /> */}
       <Navigation />
       <Front/>
-      <Works />
       <Services/>
       <CTA />
       <Skills />
+      <Works />
       <Footer />
     </section>
     
