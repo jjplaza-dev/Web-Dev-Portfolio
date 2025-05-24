@@ -52,7 +52,7 @@ function Navigation() {
 
   return <>
     <section className='w-full h-[10vh] fixed flex flex-col top-[6vh] z-2'>
-        <a href='#' className={`h-full w-[10vh] ease-in-out duration-200 bg-cover absolute left-5 lg:left-10`} style={{backgroundImage: "url(src/assets/JJOHNPwhite.png)"}} id='navLogo'></a>
+        <a href='#' className={`h-full w-[10vh] ease-in-out duration-200 bg-cover absolute left-5 lg:left-10`} style={{backgroundImage: "url(src/assets/JJOHNP.png)"}} id='navLogo'></a>
         <div className='h-fit w-fit absolute right-5 lg:right-10 top-[25%] items-end '>
             <div className={`w-fit h-fit z-2 flex flex-col self-end cursor-pointer ${activeMenu? "gap-2":" gap-[2px] lg:gap-1"} duration-200 delay-100 items-end absolute right-0`} onClick={openMenu} onMouseEnter={menuHovered} onMouseLeave={menuNotHovered}>
               
