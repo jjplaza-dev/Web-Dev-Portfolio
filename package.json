@@ -1,0 +1,21 @@
+{
+  "name": "web-dev-portfolio",
+  "version": "1.0.0",
+  "description": "",
+  "homepage": "https://github.com/jjplaza-dev/Web-Dev-Portfolio#readme",
+  "bugs": {
+    "url": "https://github.com/jjplaza-dev/Web-Dev-Portfolio/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jjplaza-dev/Web-Dev-Portfolio.git"
+  },
+  "license": "ISC",
+  "author": "jurist john plaza",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+     "dev": "npm --prefix frontend run dev",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}

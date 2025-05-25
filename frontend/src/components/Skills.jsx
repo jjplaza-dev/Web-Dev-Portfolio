@@ -35,7 +35,7 @@ function Skills() {
         {skill: "Tailwind", logo: tailwindLogo, color: "#06b6d4 ", description: "-N/A-"},  
         {skill: "Vite", logo: viteLogo, color: "#BD34FE ", description: ""},
         {skill: "Node", logo: nodeLogo, color: "#8CC84B ", description: ""},
-        {skill: "NextJS", logo: nextLogo, color: "#000000 ", description: ""},
+        {skill: "Next.js", logo: nextLogo, color: "#000000 ", description: ""},
         {skill: "MongoDB", logo: mongodbLogo, color: "#13aa52 ", description: ""},
         {skill: "Express.js", logo: expressLogo, color: "#000000 ", description: ""},
         {skill: "VS Code", logo: vscodeLogo, color: "#32B5F1 ", description: ""},

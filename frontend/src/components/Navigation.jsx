@@ -18,11 +18,12 @@ function Navigation() {
   }, []);
 
   window.addEventListener('scroll',() => {
-    if(scrollY >= window.innerHeight/1.5 && scrollY < window.innerHeight) {
+    if(scrollY >= window.innerHeight/1.5 && scrollY < (document.body.scrollHeight - (window.innerHeight + 200))) {
       document.getElementById("navLogo").style.opacity = "0"
     } else {
        document.getElementById("navLogo").style.opacity = "1"
     }
+
 
     
   })

@@ -10,6 +10,7 @@ import Workflow from "./components/Workflow"
 import Skills from "./components/Skills"
 import CTA from "./components/CTA"
 import CodeTesting from "./components/CodeTesting"
+import FillerComponent from "./components/FillerComponent"
 
 
 
@@ -24,10 +25,10 @@ function App() {
       <Navigation />
       <Front/>
       <Services/>
-      <CTA />
+      <FillerComponent />
       <Skills />
       <Works />
-      <Footer />
+     
     </section>
     
   </>

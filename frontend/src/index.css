@@ -182,6 +182,30 @@ button {
       grid-column: 1 / -1;
     }
   }
+
+  /* Custom clip-paths */
+.clip-default {
+  clip-path: polygon(100% 66%, 100% 0%, 0% 0%, 0% 66%, 20% 66%, 50% 100%, 80% 66%);
+}
+
+@media (min-width: 640px) {
+  .sm\:clip-sm {
+    clip-path: polygon(100% 60%, 100% 0%, 0% 0%, 0% 60%, 35% 60%, 50% 100%, 65% 60%);
+  }
+}
+
+@media (min-width: 768px) {
+  .md\:clip-md {
+    clip-path: polygon(100% 50%, 100% 0%, 0% 0%, 0% 50%, 30% 50%, 50% 100%, 70% 50%);
+  }
+}
+
+@media (min-width: 1024px) {
+  .lg\:clip-lg {
+    clip-path: polygon(100% 66%, 100% 0%, 0% 0%, 0% 66%, 40% 66%, 50% 100%, 60% 66%);
+  }
+}
+
   
 
   

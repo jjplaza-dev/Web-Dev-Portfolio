@@ -1,7 +1,10 @@
-import React, { useState, useRef, useEffect } from 'react';
-import WorkBox from '../page.components/WorkBox';
+import React, { useState, useRef, useEffect, use } from 'react';
+import Footer from './Footer';
+import Expertise from './Expertise';
 
 function Works() {
+  const [myRotate, setMyRotate] = useState()
+  
   const worksArr = [
     {
       title: "Project Sample",
@@ -34,6 +37,21 @@ function Works() {
   ]
  
 
+  useEffect(() => {
+    const handleScroll = () => {
+      const wheel = document.getElementById("wheel");
+      if (!wheel) return;
+
+      const rect = wheel.getBoundingClientRect();
+
+      setMyRotate((window.innerHeight - rect.top - rect.height))
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+ 
   return (
     <section className="w-screen h-fit bg-white">
       {worksArr.map((work, index) => (
@@ -48,8 +66,29 @@ function Works() {
           </div>
           
         </div>
+        
       ))}
-         
+      <div className='w-full h-[200vh] z-1 relative'>
+        <div className='w-full h-[101vh] absolute top-0 z-2 bg-white '>
+          <Expertise />
+        </div>
+        <div className="w-full h-[30vh] bg-white absolute z-2 top-[100vh] clip-default sm:clip-sm md:clip-md lg:clip-lg" />
+        
+        <div className={`w-[200px] aspect-square absolute bottom-60 right-[50%] translate-x-[50%] lg:translate-x-0 lg:bottom-10 lg:right-15 z-2 grid grid-cols-3  duration-100`} style={{rotate: `${myRotate/5}deg`}} id='wheel'>
+          <div className='w-full h-full bg-white rotate-[-45deg] translate-x-[30%] translate-y-[30%]' style={{clipPath: `polygon(60% 100%, 70% 30%, 50% 0%, 30% 30%, 40% 100%)`}}></div>
+          <div className='w-full h-full bg-white rotate-[0deg]' style={{clipPath: `polygon(60% 100%, 70% 30%, 50% 0%, 30% 30%, 40% 100%)`}}></div>
+          <div className='w-full h-full bg-white rotate-[45deg] translate-x-[-30%] translate-y-[30%]' style={{clipPath: `polygon(60% 100%, 70% 30%, 50% 0%, 30% 30%, 40% 100%)`}}></div>
+          <div className='w-full h-full bg-white rotate-[-90deg]' style={{clipPath: `polygon(60% 100%, 70% 30%, 50% 0%, 30% 30%, 40% 100%)`}}></div>
+          <div className='w-full h-full bg-white ' style={{clipPath: `polygon(60% 90%, 90% 60%, 90% 40%, 60% 10%, 40% 10%, 10% 40%, 10% 60%, 40% 90%)`}}></div>
+          <div className='w-full h-full bg-white rotate-[90deg]' style={{clipPath: `polygon(60% 100%, 70% 30%, 50% 0%, 30% 30%, 40% 100%)`}}></div>
+          <div className='w-full h-full bg-white rotate-[-135deg] translate-x-[30%] translate-y-[-30%]' style={{clipPath: `polygon(60% 100%, 70% 30%, 50% 0%, 30% 30%, 40% 100%)`}}></div>
+          <div className='w-full h-full bg-white rotate-[180deg]' style={{clipPath: `polygon(60% 100%, 70% 30%, 50% 0%, 30% 30%, 40% 100%)`}}></div>
+          <div className='w-full h-full bg-white rotate-[135deg] translate-x-[-30%] translate-y-[-30%]' style={{clipPath: `polygon(60% 100%, 70% 30%, 50% 0%, 30% 30%, 40% 100%)`}}></div>
+        </div>
+        <div className='w-full h-full relative'>
+          <Footer />
+        </div>
+      </div>
     </section>
   );
 }
