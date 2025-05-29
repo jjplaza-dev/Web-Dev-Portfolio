@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react'
 function Front() {
   const [currentPos, setCurrentPos] = useState({ x: 0, y: 0 });
 
-  const boxMaxX = 200;
+  const boxMaxX = 100;
   const boxMaxY = 100;
   const distanceTravel = 20;
 
@@ -38,7 +38,7 @@ useEffect(() => {
    useEffect(() => {
       const mySquare = document.querySelectorAll("#squareTest")
       mySquare.forEach(e => {
-        e.style.transform = `translate(${currentPos.x*(e.getBoundingClientRect().width/50)}px, ${currentPos.y*(e.getBoundingClientRect().width/50)}px) rotate(${currentPos.x}deg)`
+        e.style.transform = `translate(${currentPos.x*(e.getBoundingClientRect().width/50)}px, ${currentPos.y*(e.getBoundingClientRect().width/50)}px)`
       });
       
    })
@@ -82,7 +82,7 @@ const primary = "#303030";
 const secondary = "white"
 const accent = "#a4a4a4"
   return <>
-    <section className='w-full h-[200vh] relative bg-white'>
+    <section className='w-full h-[300vh] relative bg-white'>
       
        
       
@@ -96,7 +96,7 @@ const accent = "#a4a4a4"
                       <span className='text-[15vw] lg:text-[10vw] m-[2px] inline-block tracking-tighter leading-[1] poiret-one-regular rotate-y-90 hover:rotate-90 duration-700' key={index} id='wordText' >{text}</span>
                     ))}
                   </div>
-                  <div className='w-full h-full overflow-hidden relative bg-black'>
+                  <div className='w-full h-full max-w-[700px] overflow-hidden relative bg-black'>
                     <Hablon width={30} height={2000} rotate={90} positionX={10} color={"white"}/>  
     
                     <Hablon width={50} height={400} rotate={0} positionX={0} positionY={0} color={secondary}/>
@@ -145,7 +145,7 @@ objectives and boosts conversions.</div>
             </div>
         </div>
       </div>
-      <div className='w-full h-[100vh] bg-[#0d0d3f33] backdrop-blur-[20px] absolute bottom-0 p-2 lg:p-10 '>
+      <div className='w-full h-[200vh] bg-[#0d0d3f33] backdrop-blur-[20px] absolute bottom-0 p-2 lg:p-10 '>
        
       </div>
     </section>
@@ -154,7 +154,6 @@ objectives and boosts conversions.</div>
 
 const Hablon = (props) => {
   const strandsNum = Math.ceil(props.width/2)
-  console.log(strandsNum)
   return <section className='absolute mx-0 top-[50%] translate-y-[-50%]' style={{transform: ` translateX(${props.positionX}px) translateY(${props.positionY}px)`, transformOrigin: `center`}}>
     <div className='flex' style={{width: `${props.width}px`, height: `${props.height}px`, transform: `rotate(${props.rotate}deg)`}}>
       {Array.from({ length: strandsNum }, (x, i) => (

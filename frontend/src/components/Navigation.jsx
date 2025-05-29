@@ -65,7 +65,7 @@ function Navigation() {
                 <p className={`${activeMenu? "text-[80%]":"text-[0px]"} text-white hover:text-yellow-300 ${activeMenu? "delay-250 hover:delay-0":"delay-0"}`}><a href='#'>Home</a></p>
               </button>
               <button className={`${isMenuHovered? "w-6":"w-4"} ${activeMenu? "w-30 m-4 h-10 hover:delay-0  delay-100 bg-[#292929]":"w-2 delay-50 bg-black"} duration-100 h-1 my-[1px] rounded-4xl `}>
-                <p className={`${activeMenu? "text-[80%]":"text-[0px]"} text-white hover:text-yellow-300 ${activeMenu? "delay-200 hover:delay-0":"delay-50"}`}><a href='#'>Works</a></p>
+                <p className={`${activeMenu? "text-[80%]":"text-[0px]"} text-white hover:text-yellow-300 ${activeMenu? "delay-200 hover:delay-0":"delay-50"}`}><a href='#works'>Works</a></p>
               </button>
               <button className={`${isMenuHovered? "w-6":"w-5"} ${activeMenu? "w-30 m-4 h-10 hover:delay-0  delay-50 bg-[#292929]":"w-2 delay-100 bg-black"} duration-100 h-1 my-[1px] rounded-4xl `}>
                 <p className={`${activeMenu? "text-[80%]":"text-[0px]"} text-white hover:text-yellow-300 ${activeMenu? "delay-150 hover:delay-0":"delay-100"}`}><a href='#'>About</a></p>

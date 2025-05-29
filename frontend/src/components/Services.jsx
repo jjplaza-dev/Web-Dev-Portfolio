@@ -72,7 +72,7 @@ function Services() {
               </div>
             ))}
           </div> */}
-          <div className='w-full h-full absolute top-0 bg-white'>
+          <div className='w-full h-full absolute top-0 bg-white px-10'>
             <div className='w-fit m-auto sticky top-[25vh] text-[80px] text-center lg:text-[150px] font-archivo font-bold scale-y-80 tracking-[-0.08em]'>WHAT I DO 
               <div className='w-full lg:w-[60vw] text-[20px] tracking-normal'>I craft clean, efficient, and user-friendly websites tailored to your specific needs. My focus is on creating modern, responsive designs that deliver exceptional user experiences.</div>
             </div>
