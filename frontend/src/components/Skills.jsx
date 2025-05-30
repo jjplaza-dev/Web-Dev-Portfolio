@@ -63,14 +63,14 @@ function Skills() {
 
   return <>
     <section className='w-full h-[150vh] sm:h-[120vh] bg-white relative' id='skillsBox'>
-      <div className='w-full  text-center absolute right-[50%] bottom-[70%] translate-x-[50%] text-[50px] sm:text-[80px] lg:text-[120px] font-extrabold scale-y-80'>TECH STACK</div>
+      <div className='w-full  text-center absolute right-[50%] bottom-[70%] translate-x-[50%] text-[50px] sm:text-[80px] lg:text-[120px] font-extrabold scale-y-80 poiret-one-regular '>TECHNOLOGIES</div>
       <div className='w-[90%] sm:w-[70%] lg:w-[50%] h-fit absolute right-[50%] translate-x-[50%] top-[30%]  grid grid-cols-4 sm:grid-cols-5 lg:grid-cols-6 gap-y-5'>
         {frontendSkills.map((skills, index) => (
               <div key={index} className='w-full aspect-square relative py-5 origin-[50%_100%] duration-300' id='allSkillsBox'>
                 <div className='w-[60px] sm:w-[70px] lg:w-[80px] aspect-square m-auto bg-gray-100 flex justify-center items-center rounded-[10px] '>
                   <img className='w-6/12 aspect-square' src={skills.logo}/>
                 </div>
-                <p className='w-full text-center pt-4 sm:pt-3 lg:pt-4 text-[15px]' style={{color: skills.color}}>{skills.skill}</p>
+                <p className='w-full text-center pt-4 sm:pt-3 lg:pt-4 text-[15px] ' style={{color: skills.color}}>{skills.skill}</p>
               </div>
             ))}
        

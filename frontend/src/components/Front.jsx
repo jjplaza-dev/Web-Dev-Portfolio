@@ -3,9 +3,9 @@ import React, { useEffect, useState } from 'react'
 function Front() {
   const [currentPos, setCurrentPos] = useState({ x: 0, y: 0 });
 
-  const boxMaxX = 100;
-  const boxMaxY = 100;
-  const distanceTravel = 20;
+  const boxMaxX = 160;
+  const boxMaxY = 160;
+  const distanceTravel = 160;
 
 useEffect(() => {
   const interval = setInterval(() => {
@@ -28,7 +28,7 @@ useEffect(() => {
         return prevPos;
       }
     });
-  }, 200);
+  }, 1000);
 
   return () => clearInterval(interval); // Cleanup on unmount
 }, []);
@@ -75,8 +75,11 @@ function addEffect2() {
   setTimeout(addEffect2, 50); // Add effect to next span every second
 }
 
-addEffect();
-addEffect2();
+setTimeout(() => {
+  addEffect();
+  addEffect2();
+}, 2000)
+
   
 const primary = "#303030";
 const secondary = "white"
@@ -122,7 +125,7 @@ const accent = "#a4a4a4"
                 <div className='w-full h-full flex flex-col lg:flex-row-reverse text-[10vw] sm:text-[8vw] lg:text-[7vw] items-center text-nowrap'>
                    <div className='w-full h-full text-nowrap flex items-center'>
                     {myTitleArr.map((text, index) => (
-                      <span className='text-[12vw] lg:text-[10vw] m-[1px] min-h-[10px] min-w-[8px] lg:min-w-[20px] inline-block tracking-tighter leading-[1] overflow-hidden' key={index}><div className="w-fit h-fit poiret-one-regular duration-500" style={{ transform: "translateY(150%) scaleY(250%)"}} id='titleText'>{text}</div></span>
+                      <span className='text-[12vw] lg:text-[10vw] m-[1px] min-h-[10px] min-w-[8px] lg:min-w-[20px] inline-block tracking-tighter leading-[1] overflow-hidden ' key={index}><div className="w-fit h-fit poiret-one-regular duration-500" style={{ transform: "translateY(150%) scaleY(250%)"}} id='titleText'>{text}</div></span>
                     ))}
                   </div>
                   <div className='w-full h-full relative'> 

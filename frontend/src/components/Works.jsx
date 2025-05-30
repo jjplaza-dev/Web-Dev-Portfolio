@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect, use } from 'react';
-import Footer from './Footer';
+import Footer from './Footer';                              
 import About from './About';
 
 function Works() {
@@ -59,7 +59,7 @@ function Works() {
           <div className='w-full h-11/12 relative border-b-2'>
             <div className='w-full h-[5vh] bg-white sticky top-0 '>
               <div className='w-full h-full px-2 lg:px-10 py-2 flex justify-between relative text-black border-b-2'>
-                <div className='flex'><p className='font-thin scale-80'>[ 0{work.number} ]</p> <p className='ml-5'>{work.title}</p></div>
+                <div className='flex'><p className='font-thin scale-80 poiret-one-regular '>[ 0{work.number} ]</p> <p className='ml-5 poiret-one-regular font-extrabold'>{work.title}</p></div>
               <div className='mr-4'>{work.skills}</div>
               </div>
             </div>
