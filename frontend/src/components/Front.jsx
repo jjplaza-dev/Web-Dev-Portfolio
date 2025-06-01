@@ -3,34 +3,43 @@ import React, { useEffect, useState } from 'react'
 function Front() {
   const [currentPos, setCurrentPos] = useState({ x: 0, y: 0 });
 
-  const boxMaxX = 160;
-  const boxMaxY = 160;
-  const distanceTravel = 160;
+  
+ 
 
-useEffect(() => {
+
+useEffect(() => {  
+  const squareParent = document.getElementById("squareParent").getBoundingClientRect()
+  const squareTest = document.getElementById("squareTest").getBoundingClientRect()
+
+  const boxMaxX = squareParent.width - squareTest.width;
+  const boxMaxY = squareParent.height - squareTest.width;
+  const distanceToTravelX = boxMaxX;
+  const distanceToTravelY = boxMaxY;
+  
+
   const interval = setInterval(() => {
     
     setCurrentPos(prevPos => {
       if (prevPos.x < boxMaxX && prevPos.y <= 0) {
-        return { x: prevPos.x + distanceTravel, y: prevPos.y };
+        return { x: prevPos.x + distanceToTravelX, y: prevPos.y };
 
       } else if (prevPos.y < boxMaxY && prevPos.x >= boxMaxX) {
-        return { x: prevPos.x, y: prevPos.y + distanceTravel };
+        return { x: prevPos.x, y: prevPos.y + distanceToTravelY };
 
       } else if (prevPos.x > 0 && prevPos.y >= boxMaxY) {
-        return { x: prevPos.x - distanceTravel, y: prevPos.y };
+        return { x: prevPos.x - distanceToTravelX, y: prevPos.y };
 
       } else if (prevPos.y > 0 && prevPos.x <= 0) {
-        return { x: prevPos.x, y: prevPos.y - distanceTravel };
+        return { x: prevPos.x, y: prevPos.y - distanceToTravelY };
       }
          else {
-        clearInterval(interval); // stop when both x and y are > 100
+        clearInterval(interval); 
         return prevPos;
       }
     });
   }, 1000);
 
-  return () => clearInterval(interval); // Cleanup on unmount
+  return () => clearInterval(interval); 
 }, []);
 
 
@@ -38,9 +47,9 @@ useEffect(() => {
    useEffect(() => {
       const mySquare = document.querySelectorAll("#squareTest")
       mySquare.forEach(e => {
-        e.style.transform = `translate(${currentPos.x*(e.getBoundingClientRect().width/50)}px, ${currentPos.y*(e.getBoundingClientRect().width/50)}px)`
+        e.style.transform = `translate(${currentPos.x}px, ${currentPos.y}px)`
       });
-      
+      console.log(document.getElementById("squareParent").getBoundingClientRect().width  )
    })
 
   const myWord = "freelance"
@@ -128,8 +137,8 @@ const accent = "#a4a4a4"
                       <span className='text-[12vw] lg:text-[10vw] m-[1px] min-h-[10px] min-w-[8px] lg:min-w-[20px] inline-block tracking-tighter leading-[1] overflow-hidden ' key={index}><div className="w-fit h-fit poiret-one-regular duration-500" style={{ transform: "translateY(150%) scaleY(250%)"}} id='titleText'>{text}</div></span>
                     ))}
                   </div>
-                  <div className='w-full h-full relative'> 
-                    <div className='w-[2vw] min-w-[10px] max-w-[50px] h-[2vw] min-h-[10px] max-h-[50px] bg-black duration-1000' id='squareTest'></div>
+                  <div className='w-full h-full relative' id='squareParent'> 
+                    <div className='w-[2vw] min-w-[10px] max-w-[100px] h-[2vw] min-h-[10px] max-h-[100px] bg-black duration-1000' id='squareTest'></div>
                   </div>
 
                 </div>
