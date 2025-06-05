@@ -101,8 +101,8 @@ const accent = "#a4a4a4"
     
       <div className='w-full h-[184vh] absolute top-[16vh]'>
         <div className='w-full h-[84vh] sticky top-[16vh] flex justify-center items-center p-2 lg:p-10'>
-            <div className='w-[90%] lg:w-[75%] h-[90vw] lg:h-[70%] absolute right-[50%] translate-x-[50%] flex flex-col '>
-                <div className={`w-full h-full flex flex-col lg:flex-row text-[10vw] sm:text-[8vw] lg:text-[7vw]  `}>
+            <div className='w-[90%] lg:w-[75%] h-[90vw] lg:h-[70%] absolute left-[0%] translate-x-[-0%] flex flex-col'>
+                <div className={`w-full h-full flex flex-col lg:flex-row text-[10vw] sm:text-[8vw] lg:text-[7vw]`}>
                   <div className='w-full h-full text-nowrap flex items-center'>
                     {myWordArr.map((text, index) => (
                       <span className='text-[15vw] lg:text-[10vw] m-[2px] inline-block tracking-tighter leading-[1] poiret-one-regular rotate-y-90 hover:rotate-90 duration-700' key={index} id='wordText' >{text}</span>
@@ -131,29 +131,30 @@ const accent = "#a4a4a4"
                   </div>  
                 </div>
                 
-                <div className='w-full h-full flex flex-col lg:flex-row-reverse text-[10vw] sm:text-[8vw] lg:text-[7vw] items-center text-nowrap'>
+                <div className='w-full h-full flex flex-col lg:flex-row text-[10vw] sm:text-[8vw] lg:text-[7vw] items-center text-nowrap'>
                    <div className='w-full h-full text-nowrap flex items-center'>
                     {myTitleArr.map((text, index) => (
                       <span className='text-[12vw] lg:text-[10vw] m-[1px] min-h-[10px] min-w-[8px] lg:min-w-[20px] inline-block tracking-tighter leading-[1] overflow-hidden ' key={index}><div className="w-fit h-fit poiret-one-regular duration-500" style={{ transform: "translateY(150%) scaleY(250%)"}} id='titleText'>{text}</div></span>
                     ))}
                   </div>
                   <div className='w-full h-full relative' id='squareParent'> 
-                    <div className='w-[2vw] min-w-[10px] max-w-[100px] h-[2vw] min-h-[10px] max-h-[100px] bg-black duration-1000' id='squareTest'></div>
+                    <div className='w-[2vw] min-w-[10px] max-w-[100px] h-[2vw] min-h-[10px] max-h-[100px] bg-black duration-1000 ' id='squareTest'></div>
                   </div>
 
                 </div>
                 <div className='w-full h-full flex flex-col lg:flex-row text-[7vw] items-center'>
                    <div className='w-full h-full text-nowrap flex items-center'>
                     {myNameArr.map((text, index) => (
-                      <span className='text-[10vw] rotate-y-0 hover:rotate-y-90 min-h-[10px] min-w-[8px] lg:min-w-[20px] inline-block tracking-tighter leading-[1] sedgwick-ave-display-regular' key={index} id='nameText'>{text}</span>
+                      <span className='text-[10vw] rotate-y-0 hover:rotate-y-90 min-h-[10px] min-w-[8px] lg:min-w-[20px] inline-block tracking-tighter leading-[1] sedgwick-ave-display-regular mix-blend-difference text-black' key={index} id='nameText'>{text}</span>
                     ))}
                   </div> 
                   <div className='w-full h-full text-[20px] flex items-center px-0 lg:px-10 leading-[1]'>
                     <div>I am a freelance digital designer, dedicated to
-creating an online presence that meets business
-objectives and boosts conversions.</div>
+                        creating an online presence that meets business
+                        objectives and boosts conversions.</div>
                   </div>
                 </div>
+               
             </div>
         </div>
       </div>
