@@ -69,10 +69,10 @@ function Works() {
         
       ))}
       <div className='w-full h-[200vh] z-1 relative'>
-        <div className='w-full h-[101vh] absolute top-0 z-2 bg-white '>
+        <div className='w-full h-[101vh] absolute top-0 z-2 bg-white'>
           <About />
         </div>
-        <div className="w-full h-[30vh] bg-white absolute z-2 top-[100vh] clip-default sm:clip-sm md:clip-md lg:clip-lg" />
+        <div className="w-full h-[20vh] bg-white absolute z-2 top-[100vh]" />
         
         <div className={`w-[200px] aspect-square absolute bottom-20 right-[50%] translate-x-[50%] lg:translate-x-0 lg:bottom-10 lg:right-15 z-2 grid grid-cols-3  duration-100`} style={{rotate: `${myRotate/5}deg`}} id='wheel'>
           <div className='w-full h-full bg-white rotate-[-45deg] translate-x-[30%] translate-y-[30%]' style={{clipPath: `polygon(60% 100%, 70% 30%, 50% 0%, 30% 30%, 40% 100%)`}}></div>
