@@ -28,7 +28,7 @@ function Footer() {
 
         <div className='w-full h-[80vh] absolute top-[10vh] bg-black overflow-hidden '>
             <div className='w-full h-full absolute top-0 z-1 '>
-              <button className='w-11/12 h-fit text-[40px] md:text-[150px] lg:text-[200px] absolute top-[50%] translate-y-[-50%] left-[50%] translate-x-[-50%] text-white hover:text-black bg-inherit hover:bg-white border-2 border-white hover:border-black duration-500 rounded-[15px] poiret-one-regular font-extrabold text-center tracking-[0.06em] leading-[1em] md:text-nowrap py-[20px] lg:py-[100px] scale-y-[100%]'>LET'S TALK</button>
+              <button className='w-11/12 h-fit text-[40px] md:text-[150px] lg:text-[200px] absolute top-[50%] translate-y-[-50%] left-[50%] translate-x-[-50%] text-white hover:text-black active:text-black bg-inherit hover:bg-white active:bg-white border-2 border-white hover:border-black active:border-black duration-500 rounded-[15px] poiret-one-regular font-extrabold text-center tracking-[0.06em] leading-[1em] md:text-nowrap py-[20px] lg:py-[100px] scale-y-[100%]'>LET'S TALK</button>
               
              </div>
         </div>
