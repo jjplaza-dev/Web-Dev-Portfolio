@@ -2,14 +2,26 @@ import React, { useEffect, useState } from 'react'
 
 function Front() {
 
+  useEffect(() => {
+    const frontBLinds = document.querySelectorAll("#frontBlinds")
 
+    setTimeout(() => {
+      
+      frontBLinds.forEach((element, index) => {
+        setTimeout(() => {
+          element.style.transform = "translateX(0%)"
+        }, 1000 + index * 100);
+      });
+        
+      frontBLinds.forEach((element, index) => {
+        setTimeout(() => {
+          element.style.border = "solid 1px #64646433";
+        }, 2000 + index * 100);
+      });
+      
+    },2000)
+  })
   
- 
-
-
-
-
-
 
 
 
@@ -21,15 +33,33 @@ function Front() {
     
       <div className='w-full h-[200vh] absolute top-[0vh]'>
         <div className='w-full h-[100vh] sticky top-[0vh] '>
-            <div className='w-full h-full  absolute flex'>
-              <div className='w-full h-full border-1 border-gray-100 lg:border-gray-300'></div>
-              <div className='w-full h-full border-1 border-gray-100 lg:border-gray-300'></div>
-              <div className='w-full h-full border-1 border-gray-100 lg:border-gray-300'></div>
-              <div className='w-full h-full border-1 border-gray-100 lg:border-gray-300'></div>
-              <div className='w-full h-full border-1 border-gray-100 lg:border-gray-300'></div>
-              <div className='w-full h-full border-1 border-gray-100 lg:border-gray-300'></div>
-              <div className='w-full h-full border-1 border-gray-100 lg:border-gray-300'></div>
-              <div className='w-full h-full border-1 border-gray-100 lg:border-gray-300'></div>
+            <div className='w-full h-full bg-black absolute flex'>
+              <div className='w-full h-full  bg-black overflow-hidden '>
+                <div className='w-full h-full bg-white duration-1000 ' style={{transform: 'translateX(105%)'}} id='frontBlinds' ></div>
+              </div>
+              <div className='w-full h-full  bg-black overflow-hidden '>
+                <div className='w-full h-full bg-white duration-1000 ' style={{transform: 'translateX(105%)'}} id='frontBlinds' ></div>
+              </div>
+              <div className='w-full h-full  bg-black overflow-hidden '>
+                <div className='w-full h-full bg-white duration-1000 ' style={{transform: 'translateX(105%)'}} id='frontBlinds' ></div>
+              </div>
+              <div className='w-full h-full  bg-black overflow-hidden '>
+                <div className='w-full h-full bg-white duration-1000 ' style={{transform: 'translateX(105%)'}} id='frontBlinds' ></div>
+              </div>
+              <div className='w-full h-full  bg-black overflow-hidden '>
+                <div className='w-full h-full bg-white duration-1000 ' style={{transform: 'translateX(105%)'}} id='frontBlinds' ></div>
+              </div>
+              <div className='w-full h-full  bg-black overflow-hidden '>
+                <div className='w-full h-full bg-white duration-1000 ' style={{transform: 'translateX(105%)'}} id='frontBlinds' ></div>
+              </div>
+              <div className='w-full h-full  bg-black overflow-hidden '>
+                <div className='w-full h-full bg-white duration-1000 ' style={{transform: 'translateX(105%)'}} id='frontBlinds' ></div>
+              </div>
+              <div className='w-full h-full  bg-black overflow-hidden '>
+                <div className='w-full h-full bg-white duration-1000 ' style={{transform: 'translateX(105%)'}} id='frontBlinds' ></div>
+              </div>
+              
+              
       
             </div>
             <div className='w-[90%] h-[20%] sm:h-[35%] lg:h-[50%] absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] z-1'>

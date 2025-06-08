@@ -192,4 +192,5 @@ button {
 .poiret-one-regular {
   font-family: "Poiret One", sans-serif;
   font-style: normal;
+  border: rgba(100, 100, 100, 0.2);
 }
